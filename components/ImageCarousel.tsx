@@ -12,15 +12,12 @@ const images = [
 
 const texts = [
   {
-    rating: "4.5 Average Rating • 000 Reviews",
     content: "I never imagined I could go from 127 kg to 96 kg, it felt like a dream too far. But my coach believed in me from the very beginning. They supported me through every dip, every moment of doubt, and helped me build habits I could actually stick to. What started as just weight loss made me feel stronger, lighter, and more in control of my life than I’ve ever been.\n\n— Surya Mehta, 28, Software Engineer",
   },
   {
-    rating: "4.7 Average Rating • 150 Reviews",
     content: "I’ve lost 26 kgs and as a practicing gynecologist I can confidently say the approach is holistic, balanced, and deeply effective. My coach helped me feel nourished, not restricted. The lifestyle guidance and healthy habits have not only changed my weight, but my overall health and energy. \n\n— Dr. Riya Parulekar, 48, Gynecologist",
   },
   {
-    rating: "4.6 Average Rating • 200 Reviews",
     content: "I’ve lost 8 kgs, but more than that, I feel  lighter, healthier, and more energetic. The plan made the process feel easy and realistic. The plan was simple and practical, and the support kept me going. What felt overwhelming at first slowly became second nature. I truly feel like I’ve started something I can continue for life \n\n— Arav Thampi, 34, Director - Strategic Alliances",
   },
 ];
@@ -55,7 +52,6 @@ const ImageCarousel: React.FC = () => {
             exit={{ opacity: 0, x: 20 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-sm text-gray-500 mb-4">{texts[currentIndex].rating}</p>
             <p className="text-lg whitespace-pre-line">{texts[currentIndex].content}</p>
           </motion.div>
         </div>
