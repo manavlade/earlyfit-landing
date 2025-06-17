@@ -1,99 +1,95 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Slider } from "@/components/ui/slider"
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Slider } from "@/components/ui/slider";
 
-export default function WeightLossCalculator() {
-  const [weight, setWeight] = useState(100)
-  const [heightFeet, setHeightFeet] = useState(5)
-  const [heightInches, setHeightInches] = useState(7)
+const feetToMeters = (feet: number) => feet * 0.3048;
+const calculateBMI = (weightKg: number, heightFeet: number) => {
+  const heightMeters = feetToMeters(heightFeet);
+  return +(weightKg / (heightMeters * heightMeters)).toFixed(1);
+};
 
-  const totalHeightInInches = heightFeet * 12 + heightInches
-  const heightInMeters = totalHeightInInches * 0.0254
-  const bmi = weight / (heightInMeters * heightInMeters)
-  const weightLoss6Months = Math.round(weight * 0.15)
-  const weightLoss12Months = Math.round(weight * 0.2)
-  const bmiIn12Months = (weight - weightLoss12Months) / (heightInMeters * heightInMeters)
+const WeightCalculator = () => {
+  const [weight, setWeight] = useState(100);
+  const [heightFeet, setHeightFeet] = useState(5.6); // ~5’7”
+  
+  const currentBMI = calculateBMI(weight, heightFeet);
+  const weightLoss6 = Math.round(weight * 0.15); // 15%
+  const weightLoss12 = Math.round(weight * 0.20); // 20%
+  const bmiIn12Months = calculateBMI(weight - weightLoss12, heightFeet);
 
   return (
-    <section className="bg-[#F4F3EC] py-12 px-4 md:px-12 ">
-      <div className=" grid md:grid-cols-2 gap-10 items-center">
-        {/* Left Section */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-2">
-            Curious about <span className="text-[#101010]">weight loss medications?</span>
-          </h2>
-          <p className="text-gray-700 mb-4">
-            GLP-1 weight loss & BMI calculator. <br />
-            Minimum average weight loss with proper diet & lifestyle changes.
-          </p>
-          <div className="rounded-full bg-[#DBF0B6] text-[#1A1A1A] text-center p-10 max-w-sm">
-            <p className="text-xl mb-1">Lose up to</p>
-            <p className="text-5xl font-bold">20%</p>
-            <p className="text-lg">of your body weight<br />with GLP-1</p>
-          </div>
+    <Card className="w-full max-w-md bg-[#F3F4F0] border border-gray-300 rounded-xl p-6 space-y-6">
+      <div>
+        <div className="flex justify-between items-center mb-1">
+          <p className="font-medium text-gray-800">Weight (kg)</p>
+          <p className="text-black font-semibold">{weight}</p>
         </div>
-
-        {/* Right Section */}
-        <Card className="p-6 space-y-4 border border-gray-300 shadow-sm">
-          <div>
-            <div className="flex justify-between text-sm mb-1">
-              <span>Weight (kg)</span>
-              <span>{weight}</span>
-            </div>
-            <Slider
-              defaultValue={[weight]}
-              min={40}
-              max={160}
-              step={1}
-              onValueChange={(val) => setWeight(val[0])}
-            />
-          </div>
-
-          <div>
-            <div className="flex justify-between text-sm mb-1">
-              <span>Height (ft)</span>
-              <span>
-                {heightFeet}’{heightInches}”
-              </span>
-            </div>
-            <Slider
-              defaultValue={[heightFeet * 12 + heightInches]}
-              min={48}
-              max={84}
-              step={1}
-              onValueChange={(val) => {
-                const totalInches = val[0]
-                setHeightFeet(Math.floor(totalInches / 12))
-                setHeightInches(totalInches % 12)
-              }}
-            />
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 mt-4">
-            <Card className="p-4 text-center">
-              <p className="text-sm mb-1 text-gray-600">6 Months</p>
-              <p className="text-xl font-semibold">{weightLoss6Months} kg</p>
-            </Card>
-            <Card className="p-4 text-center">
-              <p className="text-sm mb-1 text-gray-600">12 Months</p>
-              <p className="text-xl font-semibold">{weightLoss12Months} kg</p>
-            </Card>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <Card className="p-4 text-center">
-              <p className="text-sm mb-1 text-gray-600">Current</p>
-              <p className="text-xl font-bold">{bmi.toFixed(1)}</p>
-            </Card>
-            <Card className="p-4 text-center">
-              <p className="text-sm mb-1 text-gray-600">In 12 Months</p>
-              <p className="text-xl font-bold">{bmiIn12Months.toFixed(1)}</p>
-            </Card>
-          </div>
-        </Card>
+        <Slider
+          defaultValue={[weight]}
+          min={40}
+          max={150}
+          step={1}
+          onValueChange={([val]) => setWeight(val)}
+          className="accent-lime-500"
+        />
       </div>
-    </section>
-  )
-}
+
+      <div>
+        <div className="flex justify-between items-center mb-1">
+          <p className="font-medium text-gray-800">Height (ft)</p>
+          <p className="text-black font-semibold">{`${Math.floor(heightFeet)}’${Math.round(
+            (heightFeet % 1) * 12
+          )}”`}</p>
+        </div>
+        <Slider
+          defaultValue={[heightFeet]}
+          min={4}
+          max={7}
+          step={0.1}
+          onValueChange={([val]) => setHeightFeet(parseFloat(val.toFixed(1)))}
+          className="accent-lime-500"
+        />
+      </div>
+
+      <div>
+        <p className="text-gray-700 font-medium mb-2">Weight You Could Lose (kg)</p>
+        <div className="grid grid-cols-2 gap-4">
+          <Card className="bg-white text-center py-4">
+            <CardContent>
+              <p className="text-sm text-gray-500">6 Months</p>
+              <p className="text-2xl font-bold">{weightLoss6} kg</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-white text-center py-4">
+            <CardContent>
+              <p className="text-sm text-gray-500">12 Months</p>
+              <p className="text-2xl font-bold">{weightLoss12} kg</p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      <div>
+        <p className="text-gray-700 font-medium mb-2">Body Mass Index (BMI)</p>
+        <div className="grid grid-cols-2 gap-4">
+          <Card className="bg-white text-center py-4">
+            <CardContent>
+              <p className="text-sm text-gray-500">Current</p>
+              <p className="text-2xl font-bold">{currentBMI}</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-white text-center py-4">
+            <CardContent>
+              <p className="text-sm text-gray-500">In 12 Months</p>
+              <p className="text-2xl font-bold">{bmiIn12Months}</p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </Card>
+  );
+};
+
+export default WeightCalculator;

@@ -22,22 +22,23 @@ const Navbar = () => {
 
     return (
         <div className="sticky top-0 z-50 w-full transition-all">
-            <div className="relative flex justify-between items-center px-4 py-3 md:px-8">
+            <div className="relative flex justify-between items-center px-4 py-4 md:px-8">
 
-                {/* Logo */}
-                <Link href="/">
-                    <Image
-                        src="/assets/logo.png"
-                        alt="Early Fit Logo"
-                        width={80}
-                        height={80}
-                    />
-                </Link>
+                <div className="flex items-center gap-2  p-2">
+                    <Link href="/">
+                        <Image
+                            src="/assets/logo1.png"
+                            alt="Early Fit Logo"
+                            width={180}
+                            height={180}
+                        />
+                    </Link>
+                </div>
 
                 {/* Nav Links Centered */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
                     <ul
-                        className={`flex gap-6 rounded-3xl px-6 py-2 text-sm font-medium transition-colors duration-300 ${scrolled ? "bg-[#FFFFFFA6]" : "bg-[#79855F4D]"
+                        className={`flex gap-6 rounded-3xl px-6 py-2 text-sm font-medium transition-colors duration-300 ${scrolled ? "bg-[#79855F4D]" : "bg-[#FFFFFFA6]"
                             }`}
                     >
                         <li><Link href="/">Home</Link></li>
@@ -49,12 +50,10 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                {/* CTA Button */}
                 <div className="hidden md:block">
                     <Button variant="website">Start Early</Button>
                 </div>
 
-                {/* Mobile Menu Toggle */}
                 <div className="md:hidden">
                     <button onClick={() => setMenuOpen(!menuOpen)}>
                         {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -62,7 +61,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Dropdown Menu */}
             <div
                 className={clsx(
                     "md:hidden transition-all duration-300 overflow-hidden bg-[#79855F4D]",
