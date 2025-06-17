@@ -471,7 +471,7 @@ export default function Glp1Benefits() {
                             <div className="space-y-20">
                                 <div className="flex flex-col md:flex-row items-center gap-y-6 md:gap-8">
                                     <div className="w-full md:w-1/2">
-                                        <Image src="/assets/e1.png" alt="Step 1" width={400} height={400} />
+                                        <Image src="/assets/e1.png" alt="Step 1" width={500} height={400} />
                                     </div>
                                     <div className="w-full md:w-1/2 bg-[#E6EBE2] border border-[#C1C9B6] rounded-xl p-6">
                                         <div className="text-sm font-semibold text-[#6C7D52] mb-2">STEP 1</div>
@@ -894,9 +894,9 @@ export default function Glp1Benefits() {
                     <div className="max-w-7xl mx-auto flex flex-col gap-8 ">
                         <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
                             <div className="space-y-6">
-                                <div className="flex items-center gap-2 bg-white p-2">
+                                <div className="flex items-center gap-2 p-2">
                                     <Image
-                                        src="/assets/logo.png"
+                                        src="/assets/logo1.png"
                                         alt="Logo"
                                         width={200}
                                         height={200}
