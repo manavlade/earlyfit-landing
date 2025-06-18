@@ -1,88 +1,52 @@
-'use client';
+"use client";
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
-import clsx from "clsx";
+import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
-const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+export default function Navbar() {
+    const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 10);
+            setIsScrolled(window.scrollY > 0);
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <div className="sticky top-0 z-50 w-full transition-all">
-            <div className="relative flex justify-between items-center px-4 py-4 md:px-8">
-
-                <div className="flex items-center gap-2  p-2">
-                    <Link href="/">
-                        <Image
-                            src="/assets/logo1.png"
-                            alt="Early Fit Logo"
-                            width={180}
-                            height={180}
-                        />
-                    </Link>
+        <nav
+            className={`fixed top-0 w-full z-50 transition-colors duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-rgb(177, 190, 168) bg-opacity-90"
+                }`}
+        >
+            <div className="max-w-6xl mx-auto px-4 flex items-center justify-between py-4">
+                <div className="flex items-center space-x-2">
+                    <span className="text-2xl font-bold text-gray-800">EARLY</span>
                 </div>
-
-                {/* Nav Links Centered */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-                    <ul
-                        className={`flex gap-6 rounded-3xl px-6 py-2 text-sm font-medium transition-colors duration-300 ${scrolled ? "bg-[#79855F4D]" : "bg-[#FFFFFFA6]"
-                            }`}
-                    >
-                        <li><Link href="/">Home</Link></li>
-                        <li><Link href="#">Early Program</Link></li>
-                        <li><Link href="#">Medications</Link></li>
-                        <li><Link href="#">Calculators</Link></li>
-                        <li><Link href="#">Blog</Link></li>
-                        <li><Link href="#">Contact</Link></li>
-                    </ul>
+                <div className={`flex space-x-6 border rounded-full  ${isScrolled ? "bg-[#79855F4D]" : "bg-white/40"}`}>
+                    <a href="#" className="text-gray-800 hover:text-gray-600 rounded-full px-4 py-2 transition-colors">
+                        Home
+                    </a>
+                    <a href="#" className="text-gray-800 hover:text-gray-600 rounded-full px-4 py-2 transition-colors">
+                        Early Program
+                    </a>
+                    <a href="#" className="text-gray-800 hover:text-gray-600 rounded-full px-4 py-2 transition-colors">
+                        Medications
+                    </a>
+                    <a href="#" className="text-gray-800 hover:text-gray-600 rounded-full px-4 py-2 transition-colors">
+                        Calculators
+                    </a>
+                    <a href="#" className="text-gray-800 hover:text-gray-600 rounded-full px-4 py-2 transition-colors">
+                        Blog
+                    </a>
+                    <a href="#" className="text-gray-800 hover:text-gray-600 rounded-full px-4 py-2 transition-colors">
+                        Contact
+                    </a>
                 </div>
-
-                <div className="hidden md:block">
-                    <Button variant="website">Start Early</Button>
-                </div>
-
-                <div className="md:hidden">
-                    <button onClick={() => setMenuOpen(!menuOpen)}>
-                        {menuOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
-                </div>
+                <Button className="bg-gray-800 text-white hover:bg-gray-700 rounded-full px-6 py-2">
+                    Start EARLY
+                </Button>
             </div>
-
-            <div
-                className={clsx(
-                    "md:hidden transition-all duration-300 overflow-hidden bg-[#79855F4D]",
-                    menuOpen ? "max-h-[300px] px-4 pb-4" : "max-h-0 px-4"
-                )}
-            >
-                <ul className="flex flex-col gap-3 pt-2 text-sm font-medium">
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="#">Early Program</Link></li>
-                    <li><Link href="#">Medications</Link></li>
-                    <li><Link href="#">Calculators</Link></li>
-                    <li><Link href="#">Blog</Link></li>
-                    <li><Link href="#">Contact</Link></li>
-                    <li>
-                        <Button variant="website" className="w-full mt-2">
-                            Start Early
-                        </Button>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        </nav>
     );
-};
-
-export default Navbar;
+}

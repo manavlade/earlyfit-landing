@@ -4,11 +4,24 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 
+
+import { Unna } from 'next/font/google';
+
+
+const unna = Unna({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-unna',
+  display: 'swap',
+});
+
+
 const feetToMeters = (feet: number) => feet * 0.3048;
 const calculateBMI = (weightKg: number, heightFeet: number) => {
   const heightMeters = feetToMeters(heightFeet);
   return +(weightKg / (heightMeters * heightMeters)).toFixed(1);
 };
+
 
 const WeightCalculator = () => {
   const [weight, setWeight] = useState(100);
@@ -23,8 +36,8 @@ const WeightCalculator = () => {
     <div className="bg-[#E8E9E1] p-8 rounded-xl border border-black shadow-md w-full max-w-2xl mx-auto space-y-8">
       <div>
         <div className="flex justify-between items-center mb-2">
-          <p className="font-bold text-gray-800 text-lg">Weight (kg)</p>
-          <p className="text-black font-bold text-lg">{weight}</p>
+          <p className={`font-bold text-gray-800 text-lg ${unna.className}`}>Weight (kg)</p>
+          <p className={`text-black font-bold text-lg ${unna.className}`}>{weight}</p>
         </div>
         <Slider
           defaultValue={[weight]}
@@ -37,8 +50,8 @@ const WeightCalculator = () => {
       </div>
       <div>
         <div className="flex justify-between items-center mb-2">
-          <p className="font-bold text-gray-800 text-lg">Height (ft)</p>
-          <p className="text-black font-bold text-lg">{`${Math.floor(heightFeet)}’${Math.round((heightFeet % 1) * 12)}”`}</p>
+          <p className={`font-bold text-gray-800 text-xl ${unna.className}`}>Height (ft)</p>
+          <p className={`text-black font-bold text-xl ${unna.className}`}>{`${Math.floor(heightFeet)}’${Math.round((heightFeet % 1) * 12)}”`}</p>
         </div>
         <Slider
           defaultValue={[heightFeet]}

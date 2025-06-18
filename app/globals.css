@@ -143,17 +143,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-VariableItalic.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
-}
