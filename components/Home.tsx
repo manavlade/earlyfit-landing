@@ -348,7 +348,7 @@ export default function Glp1Benefits() {
             <div>
                 <section className="py-12 px-6 md:px-16 bg-white">
                     <div className="w-full flex justify-center">
-                        <div className="w-full grid md:grid-cols-2 gap-14 items-center md:w-1/4">
+                        <div className="w-full md:max-w-[90%] grid md:grid-cols-2 gap-14 items-center ">
                             <div>
                                 <h2 className={`text-[23px] md:text-5xl justify-center-safe sm:px-5 px-0 font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
                                     Early Leans On GLP-1 To Help You Lose Weight
