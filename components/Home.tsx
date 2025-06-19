@@ -348,7 +348,7 @@ export default function Glp1Benefits() {
             <div>
                 <section className="py-12 px-6 md:px-16 bg-white">
                     <div className="w-full flex justify-center">
-                        <div className="w-full md:max-w-[75%] grid md:grid-cols-2 gap-14 items-center">
+                        <div className="w-full grid md:grid-cols-2 gap-14 items-center px-[110px]">
                             <div>
                                 <h2 className={`text-[23px] md:text-5xl justify-center-safe sm:px-5 px-0 font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
                                     Early Leans On GLP-1 To Help You Lose Weight
@@ -441,8 +441,8 @@ export default function Glp1Benefits() {
                 </section>
 
                 <section className="px-4 md:px-16 py-20 bg-white">
-                    <p className={`font-bold text-[70px] text-center ${unna.className}`} >How Early Works?</p>
-                    <p className='text-[30px] text-center'>4 Steps to Sustainable Results</p>
+                    <p className={`font-bold text-[22px] md:text-[70px] text-center ${unna.className}`} >How Early Works?</p>
+                    <p className='text-[15px] md:text-[30px] text-center'>4 Steps to Sustainable Results</p>
                     <div className="w-[90%] mx-auto space-y-20 mt-10">
 
                         <div className="flex flex-col md:flex-row items-center gap-y-6 md:gap-8 relative">
