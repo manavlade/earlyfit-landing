@@ -33,11 +33,12 @@ const WeightCalculator = () => {
   const bmiIn12Months = calculateBMI(weight - weightLoss12, heightFeet);
 
   return (
-    <div className="bg-[#E8E9E1] p-8 rounded-xl border border-black shadow-md w-full max-w-2xl mx-auto space-y-8">
+    <div className="bg-[#E8E9E1] p-4 md:p-8 rounded-xl border border-black shadow-md w-full max-w-2xl mx-auto space-y-6 md:space-y-8 text-[10px] md:text-base">
+      {/* Weight */}
       <div>
         <div className="flex justify-between items-center mb-2">
-          <p className={`font-bold text-gray-800 text-lg ${unna.className}`}>Weight (kg)</p>
-          <p className={`text-black font-bold text-lg ${unna.className}`}>{weight}</p>
+          <p className={`font-bold text-gray-800 text-[10px] md:text-lg ${unna.className}`}>Weight (kg)</p>
+          <p className={`text-black font-bold text-[10px] md:text-lg ${unna.className}`}>{weight}</p>
         </div>
         <Slider
           defaultValue={[weight]}
@@ -48,10 +49,14 @@ const WeightCalculator = () => {
           className="accent-lime-500"
         />
       </div>
+
+      {/* Height */}
       <div>
         <div className="flex justify-between items-center mb-2">
-          <p className={`font-bold text-gray-800 text-xl ${unna.className}`}>Height (ft)</p>
-          <p className={`text-black font-bold text-xl ${unna.className}`}>{`${Math.floor(heightFeet)}’${Math.round((heightFeet % 1) * 12)}”`}</p>
+          <p className={`font-bold text-gray-800 text-[10px] md:text-xl ${unna.className}`}>Height (ft)</p>
+          <p className={`text-black font-bold text-[10px] md:text-xl ${unna.className}`}>
+            {`${Math.floor(heightFeet)}’${Math.round((heightFeet % 1) * 12)}”`}
+          </p>
         </div>
         <Slider
           defaultValue={[heightFeet]}
@@ -63,42 +68,45 @@ const WeightCalculator = () => {
         />
       </div>
 
+      {/* Weight Loss */}
       <div>
-        <p className="text-black font-semibold text-[24px] mb-3">Weight You Could Lose (kg)</p>
+        <p className="text-black font-semibold text-[12px] md:text-[24px] mb-3">Weight You Could Lose (kg)</p>
         <div className="grid grid-cols-2 gap-4">
-          <Card className="bg-[#E8E9E1] border border-black text-left py-6 shadow-sm rounded-lg">
+          <Card className="bg-[#E8E9E1] border border-black text-left py-4 md:py-6 shadow-sm rounded-lg">
             <CardContent>
-              <p className="text-[20px] text-black mb-1">6 Months</p>
-              <p className="text-4xl font-bold">{weightLoss6} kg</p>
+              <p className="text-[10px] md:text-[20px] text-black mb-1">6 Months</p>
+              <p className="text-2xl md:text-4xl font-bold">{weightLoss6} kg</p>
             </CardContent>
           </Card>
-          <Card className="bg-[#E8E9E1] border border-black text-left py-6 shadow-sm rounded-lg">
+          <Card className="bg-[#E8E9E1] border border-black text-left py-4 md:py-6 shadow-sm rounded-lg">
             <CardContent>
-              <p className="text-[20px] text-black mb-1">12 Months</p>
-              <p className="text-4xl font-bold">{weightLoss12} kg</p>
+              <p className="text-[10px] md:text-[20px] text-black mb-1">12 Months</p>
+              <p className="text-2xl md:text-4xl font-bold">{weightLoss12} kg</p>
             </CardContent>
           </Card>
         </div>
       </div>
 
+      {/* BMI */}
       <div>
-        <p className="text-black font-semibold text-[24px] mb-3">Body Mass Index (BMI)</p>
+        <p className="text-black font-semibold text-[12px] md:text-[24px] mb-3">Body Mass Index (BMI)</p>
         <div className="grid grid-cols-2 gap-4">
-          <Card className="bg-[#E8E9E1] border border-black text-left py-6 shadow-sm rounded-lg">
+          <Card className="bg-[#E8E9E1] border border-black text-left py-4 md:py-6 shadow-sm rounded-lg">
             <CardContent>
-              <p className="text-[20px] text-black mb-1">Current</p>
-              <p className="text-4xl font-bold">{currentBMI}</p>
+              <p className="text-[10px] md:text-[20px] text-black mb-1">Current</p>
+              <p className="text-2xl md:text-4xl font-bold">{currentBMI}</p>
             </CardContent>
           </Card>
-          <Card className="bg-[#E8E9E1] border border-black text-left py-6 shadow-sm rounded-lg">
+          <Card className="bg-[#E8E9E1] border border-black text-left py-4 md:py-6 shadow-sm rounded-lg">
             <CardContent>
-              <p className="text-[20px] text-black mb-1">In 12 Months</p>
-              <p className="text-4xl font-bold">{bmiIn12Months}</p>
+              <p className="text-[10px] md:text-[20px] text-black mb-1">In 12 Months</p>
+              <p className="text-2xl md:text-4xl font-bold">{bmiIn12Months}</p>
             </CardContent>
           </Card>
         </div>
       </div>
     </div>
+
   );
 };
 

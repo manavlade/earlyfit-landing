@@ -25,7 +25,6 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from './ui/button';
-import { AnimatedTestimonials } from './ui/animated-testimonials';
 import Link from 'next/link';
 import {
     Accordion,
@@ -39,6 +38,7 @@ import Navbar from './Navbar';
 import ImageCarousels from './Imagecor';
 import { Unna, Cardo, Manrope } from 'next/font/google';
 import TestimonialCarousel from './testimonial-carousel';
+import AnimatedTestimonials from './ui/animated-testimonials';
 
 
 const unna = Unna({
@@ -140,33 +140,6 @@ const benefits = [
         title: 'Hormonal balance',
     },
 ]
-
-const testimonials = [
-    {
-        quote:
-            "India’s first program with 1:1 support from endocrinologists- Super Specialists in metabolism and GLP-1",
-        name: "1:1 Doctor Support",
-        src: "/assets/test1.png",
-    },
-    {
-        quote:
-            "With tailored plans and frequent check-ins, your EARLY coach is there with you every step of the way.",
-        name: "1:1 Expert Coach, 24X7",
-        src: "/assets/test2.png",
-    },
-    {
-        quote:
-            "Your Coach and Doctor guide you through a safe ramp-down & help you build lasting habits- so results continue even after medication stops.",
-        name: "Life after GLP-1",
-        src: "/assets/test3.png",
-    },
-    {
-        quote:
-            "Use the EARLY app to stay connected with your care team & track progress through fitness, CGM, & smart scale data- all in one place.",
-        name: "Smart App for every need",
-        src: "/assets/test4.png",
-    },
-];
 
 const doctors = [
     {
@@ -320,33 +293,34 @@ export default function Glp1Benefits() {
                 >
                     <div className="absolute inset-0"></div>
 
-                    <div className="relative z-10 flex min-h-screen items-center pt-10">
-                        <div className="w-full md:w-2/5 h-auto bg-whitebackdrop-blur-lg p-6 md:p-10 text-white space-y-6 shadow-md">
-                            <h1 className={`text-3xl md:text-5xl font-bold leading-snug ${unna.className}`}>
+                    <div className="relative z-10 flex flex-col md:flex-row min-h-screen items-end md:items-center pt-10">
+                        {/* Text Block */}
+                        <div className="w-full md:w-2/4 h-auto bg-whitebackdrop-blur-lg p-6 md:p-10 text-white space-y-6 shadow-md mt-auto md:mt-0">
+                            <h1 className={`text-[20px] sm:text-[24px] md:text-5xl font-bold leading-snug ${unna.className}`}>
                                 The LAST weight loss <br /> program you’ll ever try
                             </h1>
 
-                            <div className="bg-white/80 inline-block px-4 py-2 rounded-lg text-left shadow-sm">
-                                <p className="text-gray-900 text-sm md:text-[30px]">
-                                    Up to <span className="text-[50px] font-semibold text-[#79855F]">20%*</span><br />
+                            <div className="bg-white inline-block px-4 rounded-lg text-left shadow-sm">
+                                <p className="text-gray-900 text-[12px] sm:text-sm md:text-[30px] font-bold">
+                                    Up to <span className="text-[20px] sm:text-[24px] md:text-[50px] font-semibold text-[#79855F]">20%*</span><br />
                                     weight loss with GLP-1
                                 </p>
                             </div>
 
                             <div className="flex flex-wrap gap-4">
-                                <button className="bg-[#D2F47D] text-black text-[10px] font-semibold px-5 py-2 rounded-full transition">
+                                <button className="bg-[#D2F47D] text-black text-sm sm:text-[16px] md:text-[18px] font-semibold px-5 py-2 rounded-full transition">
                                     Book FREE Consultation
                                 </button>
-                                <button className="bg-white text-black border border-gray-300 text-sm font-medium px-5 py-2 rounded-full transition hover:bg-gray-100">
+                                <button className="bg-white text-black border border-gray-300 text-sm sm:text-[16px] md:text-[18px] font-medium px-5 py-2 rounded-full transition hover:bg-gray-100">
                                     Learn About GLP-1
                                 </button>
                             </div>
 
-                            <p className="text-xl text-white">
+                            <p className="text-[14px] sm:text-[18px] md:text-[26px] text-white">
                                 India’s first weight loss program built <br /> by Super-Specialist Endocrinologists
                             </p>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 text-xl text-white">
+                            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 text-xl text-white text-[26px]">
                                 <div className="flex items-center gap-2">
                                     <Stethoscope className="w-5 h-5" />
                                     <span>Built by Super-Specialty Endocrinologists</span>
@@ -368,22 +342,23 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
+
             </div>
 
             <div>
-                <section className="py-16 px-6 pt-24 min-h-[calc(100vh+200px)] md:px-16 bg-white">
+                <section className="py-12 px-6 md:px-16 bg-white">
                     <div className="w-full flex justify-center">
-                        <div className="w-full max-w-[75%] grid md:grid-cols-2 gap-14 items-center">
+                        <div className="w-full md:max-w-[75%] grid md:grid-cols-2 gap-14 items-center">
                             <div>
-                                <h2 className={`text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
+                                <h2 className={`text-[23px] md:text-5xl justify-center-safe sm:px-5 px-0 font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
                                     Early Leans On GLP-1 To Help You Lose Weight
                                 </h2>
-                                <p className="text-gray-700 text-lg md:text-xl">
+                                <p className="text-gray-700 text-[10px] md:text-xl">
                                     GLP-1s are a naturally occurring peptide in the human body. They make you feel full for longer, naturally reducing appetite and cravings.
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-10 gap-y-5">
+                            <div className="grid grid-cols-3 gap-x-10 gap-y-5">
                                 {benefits.map((benefit, index) => (
                                     <div key={index} className="flex flex-col items-center">
                                         <Image
@@ -402,30 +377,31 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
-                <section className={"px-6 py-12 lg:px-20 lg:py-24"}>
+                <section className="px-6 py-6 md:py-16">
                     <div className="w-full flex justify-center">
-                        <div className="w-full max-w-[75%] flex flex-col md:flex-row justify-between gap-5 items-center">
+                        <div className="w-full max-w-[90%] md:max-w-[75%] flex flex-col-reverse md:flex-row justify-between gap-8 items-center">
+                            <div className="w-full md:w-1/2">
+                                <Image
+                                    src="/assets/graph.png"
+                                    alt="graph"
+                                    width={1000}
+                                    height={1000}
+                                    className="w-full h-auto"
+                                />
+                            </div>
 
-                            <Image
-                                src="/assets/graph.png"
-                                alt="graph"
-                                width={1000}
-                                height={1000}
-                            />
-
-                            <div className="flex flex-col gap-5 border p-6 border-white text-left">
-                                <p className={`font-bold text-[32px] md:text-[40px] leading-snug ${unna.className}`}>
+                            <div className="w-full md:w-1/2 flex flex-col gap-4 border p-6 border-white text-left">
+                                <p className={`font-bold text-[26px] sm:text-[32px] md:text-[40px] leading-snug ${unna.className}`}>
                                     Rooted in Medical Research and Science
                                 </p>
 
-                                <p className="text-[18px] md:text-[20px]">
+                                <p className="text-[16px] sm:text-[5px] md:text-[20px]">
                                     <span className="underline pr-2">Clinical Research</span>
                                     shows that the Early program can help you lose up to 20% of weight, often 4X more than just diet/exercise alone.
                                 </p>
-                                <p className="text-[18px] md:text-[20px]">
-                                    <p className="text-[18px] md:text-[20px]">
-                                        GLP-1 when used alone has risks like muscle loss.
-                                    </p>
+
+                                <p className="text-[16px] sm:text-[5px] md:text-[20px]">
+                                    GLP-1 when used alone has risks like muscle loss. <br />
                                     Early's program uses pioneering technology, lifestyle coaching and science to be the safest and most effective long-term weight loss solution.
                                 </p>
                             </div>
@@ -433,16 +409,20 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
+
                 <section className={"bg-[#E8E9E1] px-6 py-12 lg:px-20 lg:py-24"}>
                     <div className="w-full flex justify-center">
-                        <div className="w-full max-w-[75%] flex flex-col md:flex-row gap-5 items-center">
+                        <div className="w-full md:max-w-[75%] flex flex-col md:flex-row gap-5 items-center">
 
                             <div>
                                 <p className={`text-[#79855F] font-bold text-[30px] md:text-[40px] leading-snug ${unna.className}`}>
-                                    GLP-1s are
-                                    <span className="font-bold text-black px-2">BETTER</span>
+                                    <span className="whitespace-nowrap">
+                                        GLP-1s are <span className="text-black">BETTER</span>
+                                    </span>
+                                    <br />
                                     with Early
                                 </p>
+
                                 <p className="text-[18px] md:text-[20px]">Just like Biology</p>
 
                                 <div className="flex justify-start pt-5">
@@ -453,7 +433,7 @@ export default function Glp1Benefits() {
                             </div>
 
                             <div>
-                                <AnimatedTestimonials testimonials={testimonials} />
+                                <AnimatedTestimonials />
                             </div>
 
                         </div>
@@ -463,17 +443,18 @@ export default function Glp1Benefits() {
                 <section className="px-4 md:px-16 py-20 bg-white">
                     <p className={`font-bold text-[70px] text-center ${unna.className}`} >How Early Works?</p>
                     <p className='text-[30px] text-center'>4 Steps to Sustainable Results</p>
-                    <div className="w-full md:w-3/4 mx-auto space-y-20 mt-10">
+                    <div className="w-[90%] mx-auto space-y-20 mt-10">
+
                         <div className="flex flex-col md:flex-row items-center gap-y-6 md:gap-8 relative">
                             <div className="w-full md:w-1/4">
                                 <Image src="/assets/e1.png" alt="Step 1" width={300} height={240} />
                             </div>
                             <div className="w-full md:w-3/4 bg-[#E6EBE2] border border-[#C1C9B6] rounded-2xl p-6 relative overflow-visible">
-                                <div className={`absolute -top-4 left-4 bg-[#E6EBE2] border border-[#C1C9B6] px-4 py-1 rounded-lg text-sm font-semibold text-[#6C7D52] ${unna.className}`}>
+                                <div className={`absolute -top-4 left-4 bg-[#E6EBE2] border border-[#C1C9B6] px-4 py-1 rounded-lg text-[24px] font-semibold text-[#6C7D52] ${unna.className}`}>
                                     STEP 1
                                 </div>
-                                <h3 className={`text-xl md:text-2xl font-extrabold mb-2 ${unna.className}`}>Start with a Free Consultation</h3>
-                                <p className="text-base md:text-xl text-gray-800 mb-4">
+                                <h3 className={`text-xl md:text-[40px] font-extrabold mb-2 ${unna.className}`}>Start with a Free Consultation</h3>
+                                <p className="text-base md:text-[26px] text-gray-800 mb-4">
                                     Book a free, no-obligation call with an Early expert. We’ll explain how GLP-1s work, answer your questions, and assess whether Early is the right fit for your health goals.
                                 </p>
                                 <button className="bg-[#6C7D52] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-[#5b6947] transition">
@@ -483,11 +464,11 @@ export default function Glp1Benefits() {
                         </div>
                         <div className="flex flex-col-reverse md:flex-row items-center gap-10 relative">
                             <div className="w-full md:w-3/4 bg-[#F3F4F0] border border-[#D3D8CB] rounded-2xl p-6 relative">
-                                <div className={`absolute -top-4 left-4 bg-[#F3F4F0] border border-[#D3D8CB] px-4 py-1 rounded-lg text-sm font-semibold text-[#6C7D52] ${unna.className}`}>
+                                <div className={`absolute -top-4 left-4 bg-[#F3F4F0] border border-[#D3D8CB] px-4 py-1 rounded-lg text-[24px] font-semibold text-[#6C7D52] ${unna.className}`}>
                                     STEP 2
                                 </div>
-                                <h3 className={`text-xl md:text-2xl font-extrabold mb-2 ${unna.className}`}>Activate Early App, Devices & Care Team</h3>
-                                <p className="text-base md:text-xl text-gray-800">
+                                <h3 className={`text-xl md:text-[40px] font-extrabold mb-2 ${unna.className}`}>Activate Early App, Devices & Care Team</h3>
+                                <p className="text-base md:text-[26px] text-gray-800">
                                     We help you setup the Early App, your at-home blood tests, smart scale delivery, and your first consult with an Early Endocrinologist. The Early app connects your CGM, fitness tracker, and scale, and brings your care team, data, and daily plan into one place.
                                 </p>
                             </div>
@@ -500,22 +481,22 @@ export default function Glp1Benefits() {
                                 <Image src="/assets/e3.png" alt="Step 3" width={300} height={240} />
                             </div>
                             <div className="w-full md:w-3/4 bg-[#E6EBE2] border border-[#C1C9B6] rounded-2xl p-6 relative">
-                                <div className={`absolute -top-4 left-4 bg-[#E6EBE2] border border-[#C1C9B6] px-4 py-1 rounded-lg text-sm font-semibold text-[#6C7D52] ${unna.className}`}>
+                                <div className={`absolute -top-4 left-4 bg-[#E6EBE2] border border-[#C1C9B6] px-4 py-1 rounded-lg text-[24px] font-semibold text-[#6C7D52] ${unna.className}`}>
                                     STEP 3
                                 </div>
-                                <h3 className={`text-xl md:text-2xl font-extrabold mb-2 ${unna.className}`}>Your Personalized Plan</h3>
-                                <p className="text-base md:text-xl text-gray-800">
+                                <h3 className={`text-xl md:text-[40px] font-extrabold mb-2 ${unna.className}`}>Your Personalized Plan</h3>
+                                <p className="text-base md:text-[26px] text-gray-800">
                                     Your care team analyzes data from your meals, workouts, and body composition. Your food, movement, and medication plan is adjusted weekly and scientifically, all tailored to your body.
                                 </p>
                             </div>
                         </div>
                         <div className="flex flex-col-reverse md:flex-row items-center gap-10 justify-between relative">
                             <div className="w-full md:w-3/4 bg-[#F3F4F0] border border-[#D3D8CB] rounded-2xl p-6 relative">
-                                <div className={`absolute -top-4 left-4 bg-[#F3F4F0] border border-[#D3D8CB] px-4 py-1 rounded-lg text-sm font-semibold text-[#6C7D52] ${unna.className}`}>
+                                <div className={`absolute -top-4 left-4 bg-[#F3F4F0] border border-[#D3D8CB] px-4 py-1 rounded-lg text-[24px] font-semibold text-[#6C7D52] ${unna.className}`}>
                                     STEP 4
                                 </div>
-                                <h3 className={`text-xl md:text-2xl font-extrabold mb-2 ${unna.className}`}>Medication stops, Progress continues!</h3>
-                                <p className="text-base md:text-xl text-gray-800">
+                                <h3 className={`text-xl md:text-[40px] font-extrabold mb-2 ${unna.className}`}>Medication stops, Progress continues!</h3>
+                                <p className="text-base md:text-[26px] text-gray-800">
                                     We help you taper medication safely and lock in your progress. Your app keeps you on track with habit reminders, coaching nudges, and progress insights — long after the meds stop.
                                 </p>
                             </div>
@@ -523,7 +504,7 @@ export default function Glp1Benefits() {
                                 <Image src="/assets/e4.png" alt="Step 4" width={300} height={240} />
                             </div>
                         </div>
-                        <p className="text-base md:text-xl text-gray-800">
+                        <p className="text-base md:text-lg text-gray-800">
                             *Medications are only prescribed if your doctor finds them appropriate. If your BMI is under 27, or between
                             27-30 without a qualifying health condition, you won’t be eligible, and Metabolic Reset subscription will be refunded.
                         </p>
@@ -534,7 +515,7 @@ export default function Glp1Benefits() {
                     <TestimonialCarousel />
                 </div>
 
-                <section className={"py-16 bg-[#fefdfc] text-center px-6"}>
+                {/* <section className={"py-16 bg-[#fefdfc] text-center px-6"}>
                     <h2 className={`text-3xl md:text-4xl font-bold mb-12 ${unna.className}`}>Leading Doctors</h2>
                     <div className="flex flex-col md:flex-row justify-center items-center gap-8 relative max-w-7xl mx-auto">
                         <button className="absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full border border-[#02542D] hover:bg-gray-100">
@@ -560,7 +541,7 @@ export default function Glp1Benefits() {
                             <ChevronRight className="w-5 h-5 text-[#02542D]" />
                         </button>
                     </div>
-                </section>
+                </section> */}
 
                 <section className={"bg-[#F9F8F3] px-6 py-12 lg:px-20 lg:py-24"}>
                     <div className="w-full flex justify-center">
@@ -602,7 +583,7 @@ export default function Glp1Benefits() {
                                 <h2 className={`text-[40px] md:text-4xl font-bold mb-4 ${unna.className}`}>
                                     Find your <span className="text-[#A5B970]">MetabolicType</span>
                                 </h2>
-                                <p className="text-gray-700 mb-8 text-[20px]">
+                                <p className="text-gray-700 mb-8 text-[22px] ">
                                     Not all weight gain is the same. Understand your biology—and finally unlock
                                     the approach that works for YOU. Early’s team of super specialist
                                     endocrinologists and nutritionists have created MetabolicType, a research-backed
@@ -663,24 +644,25 @@ export default function Glp1Benefits() {
                                     alt="App screenshot"
                                     width={1000}
                                     height={1000}
-                                    className="w-full"
+                                    className="w-full h-auto max-w-[500px]"
                                 />
                             </div>
+
                         </div>
                     </div>
                 </section>
 
                 <section className={"bg-[#E8E9E1] px-6 py-12 lg:px-20 lg:py-24"}>
                     <div className="w-full flex justify-center">
-                        <div className="w-full max-w-[75%] flex flex-col md:flex-row gap-5 items-center">
+                        <div className="w-full md:max-w-[75%] flex flex-col md:flex-row gap-5 items-center">
                             <div className="flex-1">
-                                <p className={`text-[50px] font-bold ${unna.className}`}>
+                                <p className={` text-[20px] md:text-[50px] font-bold ${unna.className}`}>
                                     Curious about weight
                                     <br />
                                     loss medications?
                                 </p>
-                                <p className="text-[20px] text-black font-semibold py-4">GLP-1 weight loss & BMI calculator.</p>
-                                <p className="text-[20px] text-black font-semibold">Minimum average weight loss with proper diet & lifestyle changes.</p>
+                                <p className=" text-[12px] md:text-[20px]  text-black font-medium py-4">GLP-1 weight loss & BMI calculator.</p>
+                                <p className="text-[12px] md:text-[20px] text-black font-medium">Minimum average weight loss with proper diet & lifestyle changes.</p>
 
                                 <div className="flex mt-6">
                                     <div className="bg-[#D2F47D] border border-[#D2F47D] w-80 h-80 sm:w-96 sm:h-96 rounded-full flex flex-col items-center justify-center text-center p-6">
@@ -706,21 +688,30 @@ export default function Glp1Benefits() {
                         <p className="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
                         <div className="bg-[#E8E9E1] p-10">
-                            <div className="overflow-x-auto rounded-xl border border-gray-300">
+                            <div className="block md:hidden flex justify-center items-center">
+                                <img src="/assets/Group 1261154645.png" alt="Logo" />
+                            </div>
+                            <div className="hidden md:block overflow-x-auto rounded-xl border border-gray-300">
                                 <table className="min-w-full text-sm text-gray-800 bg-[#79855F0D] border-separate border-spacing-y-4">
                                     <thead>
                                         <tr className="bg-[#79855F] text-white text-base">
-                                            <th className={`p-4 text-left text-white font-bold text-[30px] ${cardo.className}`}>INCLUSIONS</th>
-                                            <th className={`p-4 text-center text-white font-bold text-[30px] ${cardo.className}`}>METABOLIC RESET</th>
-                                            <th className={`p-4 text-center text-white font-bold text-[30px] ${cardo.className}`}>METABOLIC LITE</th>
+                                            <th className={`p-4 text-left text-white font-bold text-[30px] ${cardo.className}`}>
+                                                INCLUSIONS
+                                            </th>
+                                            <th className={`p-4 text-center text-white font-bold text-[30px] ${cardo.className}`}>
+                                                METABOLIC RESET
+                                            </th>
+                                            <th className={`p-4 text-center text-white font-bold text-[30px] ${cardo.className}`}>
+                                                METABOLIC LITE
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {inclusions.map((item, index) => (
                                             <tr key={index} className="bg-[#79855F0D] rounded-xl shadow-sm border border-gray-200">
-                                                <td className={`p-4 text-[20px] text-black font-bold flex items-center gap-2 ${cardo.className}`}>
+                                                <td className={`p-4 text-[20px] text-black font-extrabold flex items-center gap-2 ${cardo.className}`}>
                                                     {item.icon}
-                                                    {item.label}
+                                                    <div className="flex">{item.label}</div>
                                                 </td>
                                                 <td className={`p-4 text-center text-[20px] ${cardo.className}`}>
                                                     {typeof item.reset === "boolean" ? (
@@ -735,7 +726,11 @@ export default function Glp1Benefits() {
                                                 </td>
                                                 <td className={`p-4 text-center text-[20px] ${cardo.className}`}>
                                                     {typeof item.lite === "boolean" ? (
-                                                        <Check className="text-[#79855F] mx-auto" />
+                                                        item.lite ? (
+                                                            <Check className="text-[#79855F] mx-auto" />
+                                                        ) : (
+                                                            <X className="text-red-500 mx-auto" />
+                                                        )
                                                     ) : (
                                                         item.lite
                                                     )}
@@ -750,11 +745,11 @@ export default function Glp1Benefits() {
                                         </tr>
                                     </tbody>
                                 </table>
-
                             </div>
                         </div>
 
-                        <p className="text-[20px] mt-4 text-gray-600 italic">
+
+                        <p className=" text-[7px] md:text-[20px] mt-4 text-gray-600 italic">
                             **Any medication beyond the initial 3 months will be prescribed by your doctor based on your needs."
                             <br />
                             EMI option available
