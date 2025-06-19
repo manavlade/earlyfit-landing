@@ -33,7 +33,7 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`hidden md:flex space-x-6 px-4 py-2 text-[15px] rounded-full transition-all duration-300 ${isScrolled
+                    className={`hidden md:flex space-x-6 px-4  text-[15px] rounded-full transition-all duration-300 ${isScrolled
                         ? "bg-[#79855F4D]"
                         : "bg-white/10 backdrop-blur-2xl"
                         }`}
