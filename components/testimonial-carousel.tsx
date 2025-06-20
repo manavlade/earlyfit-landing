@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { unna } from "@/fonts/unna"
 
 interface TestimonialData {
   id: number
@@ -81,12 +82,13 @@ export default function TestimonialCarousel() {
 
   return (
     <div className="bg-[#F9F8F3]" >
-      <div className="w-full  max-w-7xl mx-auto px-6 py-12 ">
+      <div className="w-full  max-w-7xl mx-auto  ">
+      <h1 className={`text-center text-[22px] md:text-[70px] font-extrabold ${unna.className}`}>Real Success Stories</h1>
         {/* Rating Display Section */}
         <div className="text-center mb-16 relative">
           <div className="flex justify-center items-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-8 h-8 fill-green-500 text-green-500 drop-shadow-sm" />
+              <Star key={i} className="w-8 h-8 fill-[#79A55F] text-[#79A55F] drop-shadow-sm" />
             ))}
           </div>
           <p className="text-2xl text-gray-700 font-semibold">4.5 Average Rating • {testimonials.length * 47} Reviews</p>
@@ -94,10 +96,8 @@ export default function TestimonialCarousel() {
 
         {/* Main Content Layout */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left Section - Active Content */}
           <div className="space-y-8">
-            {/* Active Testimonial Image */}
-            <Card className="overflow-hidden shadow-2xl">
+            <Card className="overflow-hidden shadow-2xl p-0">
               <CardContent className="p-0">
                 <div className="relative h-96 w-full">
                   <Image
@@ -113,8 +113,7 @@ export default function TestimonialCarousel() {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Active Testimonial Content */}
+            
             <div className="space-y-6">
               <blockquote className="text-gray-800 text-xl leading-relaxed font-light italic">
                 "{activeTestimonial.content}"
@@ -132,17 +131,15 @@ export default function TestimonialCarousel() {
             </div>
           </div>
 
-          {/* Right Section - Image Carousel */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-gray-900 text-center">Other Success Stories</h3>
 
-            {/* Carousel Container */}
             <div className="relative">
               <div className="grid grid-cols-2 gap-4 h-80">
                 {otherTestimonials.slice(0, 4).map((testimonial, index) => (
                   <Card
                     key={testimonial.id}
-                    className={`overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 hover:shadow-xl ${index < 2 ? "h-full" : "h-full"
+                    className={`overflow-hidden cursor-pointer p-0 transition-all duration-500 hover:scale-105 hover:shadow-xl ${index < 2 ? "h-full" : "h-full"
                       }`}
                     onClick={() => {
                       setActiveIndex(testimonials.findIndex((t) => t.id === testimonial.id))
@@ -169,47 +166,29 @@ export default function TestimonialCarousel() {
                   </Card>
                 ))}
               </div>
-
-              {/* Navigation Arrows */}
+              
               <div className="flex justify-center items-center gap-6 mt-8">
                 <Button
                   variant="outline"
                   size="icon"
-                  className="w-14 h-14 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-purple-300"
+                  className="w-14 h-14 rounded-full bg-transparent shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#02542D] hover:border-[#02542D]"
                   onClick={goToPrevious}
                 >
-                  <ChevronLeft className="h-6 w-6 text-gray-600" />
+                  <ArrowLeft className="h-6 w-6 text-[#02542D]" />
                 </Button>
-
-                <div className="flex gap-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-purple-600 scale-125 shadow-lg" : "bg-gray-300 hover:bg-gray-400"
-                        }`}
-                      onClick={() => {
-                        setActiveIndex(index)
-                        setIsAutoPlaying(false)
-                        setTimeout(() => setIsAutoPlaying(true), 10000)
-                      }}
-                    />
-                  ))}
-                </div>
-
                 <Button
                   variant="outline"
                   size="icon"
-                  className="w-14 h-14 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-purple-300"
+                  className="w-14 h-14 rounded-full bg-transparent  shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#02542D] hover:border-[#02542D]"
                   onClick={goToNext}
                 >
-                  <ChevronRight className="h-6 w-6 text-gray-600" />
+                  <ArrowRight className="h-6 w-6 text-[#02542D]" />
                 </Button>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Auto-play indicator */}
         <div className="flex justify-center mt-8">
           <div className="flex items-center gap-2 text-sm text-gray-500">
             <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? "bg-green-500 animate-pulse" : "bg-gray-400"}`} />

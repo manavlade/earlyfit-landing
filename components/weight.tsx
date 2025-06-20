@@ -34,7 +34,6 @@ const WeightCalculator = () => {
 
   return (
     <div className="bg-[#E8E9E1] p-4 md:p-8 rounded-xl border border-black shadow-md w-full max-w-2xl mx-auto space-y-6 md:space-y-8 text-[10px] md:text-base">
-      {/* Weight */}
       <div>
         <div className="flex justify-between items-center mb-2">
           <p className={`font-bold text-gray-800 text-[10px] md:text-lg ${unna.className}`}>Weight (kg)</p>
@@ -49,8 +48,6 @@ const WeightCalculator = () => {
           className="accent-lime-500"
         />
       </div>
-
-      {/* Height */}
       <div>
         <div className="flex justify-between items-center mb-2">
           <p className={`font-bold text-gray-800 text-[10px] md:text-xl ${unna.className}`}>Height (ft)</p>

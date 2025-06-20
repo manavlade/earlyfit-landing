@@ -22,7 +22,7 @@ export default function Navbar() {
             className={`fixed top-0 w-full z-50 transition-colors duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-rgb(177, 190, 168) bg-opacity-90"
                 }`}
         >
-            <div className="mx-auto px-10 flex items-center justify-between py-4">
+            <div className=" px-2 md:px-10 flex items-center justify-between py-4">
                 <div className="flex items-center space-x-2">
                     <Image
                         src={"/assets/logo.png"}
@@ -33,44 +33,44 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`hidden md:flex space-x-6 px-4  text-[15px] rounded-full transition-all duration-300 ${isScrolled
+                    className={`hidden md:flex space-x-6 px-4  text-[20px] rounded-full transition-all duration-300 ${isScrolled
                         ? "bg-[#79855F4D]"
                         : "bg-white/10 backdrop-blur-2xl"
                         }`}
                 >
                     <a
                         href="#"
-                        className="text-black font-bold rounded-full px-4 py-2 transition-colors"
+                        className="text-black underline font-bold rounded-full px-4 py-2 transition-colors"
                     >
                         Home
                     </a>
                     <a
                         href="#"
-                        className="text-black font-bold rounded-full px-4 py-2 transition-colors"
+                        className="text-black  rounded-full px-4 py-2 transition-colors"
                     >
                         Early Program
                     </a>
                     <a
                         href="#"
-                        className="text-black font-bold rounded-full px-4 py-2 transition-colors"
+                        className="text-black  rounded-full px-4 py-2 transition-colors"
                     >
                         Medications
                     </a>
                     <a
                         href="#"
-                        className="text-black font-bold rounded-full px-4 py-2 transition-colors"
+                        className="text-black  rounded-full px-4 py-2 transition-colors"
                     >
                         Calculators
                     </a>
                     <a
                         href="#"
-                        className="text-black font-bold rounded-full px-4 py-2 transition-colors"
+                        className="text-black  rounded-full px-4 py-2 transition-colors"
                     >
                         Blog
                     </a>
                     <a
                         href="#"
-                        className="text-black font-bold rounded-full px-4 py-2 transition-colors"
+                        className="text-black rounded-full px-4 py-2 transition-colors"
                     >
                         Contact
                     </a>
@@ -88,7 +88,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden md:block">
-                    <Button className="bg-[#393E2C] text-white text-[20px] rounded-full p-7">
+                    <Button className="bg-[#393E2C] text-white text-[20px] rounded-full py-7 px-12">
                         Start EARLY
                     </Button>
                 </div>

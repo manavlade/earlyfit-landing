@@ -124,7 +124,6 @@ export default function TestimonialSection() {
               </div>
             </div>
 
-            {/* Center Image (Main) */}
             <div className="relative w-80 h-96 z-10 transform transition-all duration-500">
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
@@ -139,7 +138,6 @@ export default function TestimonialSection() {
               </div>
             </div>
 
-            {/* Right Image */}
             <div className="relative w-64 h-80 opacity-70 transform scale-90 transition-all duration-500">
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <Image
@@ -155,7 +153,6 @@ export default function TestimonialSection() {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
           <div className="flex justify-center items-center gap-4 mt-8">
             <Button
               variant="outline"
@@ -176,20 +173,9 @@ export default function TestimonialSection() {
             </Button>
           </div>
 
-          {/* Additional Purple W badges */}
-          <div className="absolute -bottom-8 left-16 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-sm">W</span>
-          </div>
-          <div className="absolute -top-4 right-12 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-xs">W</span>
-          </div>
-          <div className="absolute bottom-12 -right-8 w-7 h-7 bg-purple-600 rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-sm">W</span>
-          </div>
         </div>
       </div>
 
-      {/* Dots Indicator */}
       <div className="flex justify-center mt-12 gap-3">
         {testimonials.map((_, index) => (
           <button
