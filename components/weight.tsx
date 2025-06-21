@@ -65,7 +65,6 @@ const WeightCalculator = () => {
         />
       </div>
 
-      {/* Weight Loss */}
       <div>
         <p className="text-black font-semibold text-[12px] md:text-[24px] mb-3">Weight You Could Lose (kg)</p>
         <div className="grid grid-cols-2 gap-4">

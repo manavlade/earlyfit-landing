@@ -349,17 +349,21 @@ export default function Glp1Benefits() {
                     <div
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
                         style={{
-                            backgroundImage: `url('/assets/home.png')`,
+                            backgroundImage: `url('/assets/home1.png')`,
                         }}
                     />
+
+                    <div className="absolute inset-y-0 left-0 w-[42%] hidden md:block backdrop-blur-sm bg-white/10 border-r border-white/10 shadow-lg z-10" />
 
                     <div className="relative min-h-screen">
                         <div className="absolute inset-0 bg-black/20"></div>
 
-                        <div className="absolute bottom-0 left-0 z-10 w-full md:w-[50%] p-6 md:p-10 text-white space-y-6 bg-white/10 backdrop-blur-md border border-white/30 rounded-xl md:bg-transparent md:backdrop-blur-none md:border-none">
+                        <div className="absolute lg:pt-64 bottom-0 left-0 z-10 w-full md:w-[65%] p-6 md:p-10 text-white space-y-6 
+              bg-white/10 backdrop-blur-md border border-white/30 rounded-xl
+              lg:bg-transparent lg:backdrop-blur-none lg:border-none lg:rounded-none">
 
                             <h1 className={`sm:text-[60px] md:text-5xl xl:text-7xl font-bold leading-snug ${unna.className}`}>
-                                The LAST weight loss program you’ll ever try
+                                The LAST weight loss <br /> program you’ll ever try
                             </h1>
 
                             <div className="bg-white inline-block px-4 py-2 rounded-lg text-left shadow-sm">
@@ -377,8 +381,7 @@ export default function Glp1Benefits() {
                                     Learn About GLP-1
                                 </button>
                             </div>
-
-                            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 text-white text-[18px] md:text-[18px] break-words w-full">
+                            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 text-white text-[18px] md:text-[24px] break-words w-full">
                                 <div className="flex items-start gap-2">
                                     <Stethoscope className="w-5 h-5 shrink-0 mt-1" />
                                     <span>Built by Super-Specialty Endocrinologists</span>
@@ -401,8 +404,9 @@ export default function Glp1Benefits() {
                     </div>
 
                 </section>
-
             </div>
+
+
 
             <div>
                 <section className="py-12 px-6 md:px-16 pt-[100px] bg-[#FAF8F5]">
@@ -587,7 +591,7 @@ export default function Glp1Benefits() {
                 </section>
 
                 <div>
-                    
+
                     <TestimonialCarousel />
                 </div>
 
@@ -828,22 +832,14 @@ export default function Glp1Benefits() {
                                                 </td>
                                                 <td className={`p-4 text-center text-[20px] ${cardo.className}`}>
                                                     {typeof item.reset === "boolean" ? (
-                                                        item.reset ? (
-                                                            <Check className="text-[#79855F] mx-auto" />
-                                                        ) : (
-                                                            <X className="text-red-500 mx-auto" />
-                                                        )
+                                                        <Check className="text-[#79855F] mx-auto" />
                                                     ) : (
                                                         item.reset
                                                     )}
                                                 </td>
                                                 <td className={`p-4 text-center text-[20px] ${cardo.className}`}>
                                                     {typeof item.lite === "boolean" ? (
-                                                        item.lite ? (
-                                                            <Check className="text-[#79855F] mx-auto" />
-                                                        ) : (
-                                                            <X className="text-red-500 mx-auto" />
-                                                        )
+                                                        <Check className="text-[#79855F] mx-auto" />
                                                     ) : (
                                                         item.lite
                                                     )}
@@ -907,17 +903,17 @@ export default function Glp1Benefits() {
 
                 <section className={"bg-[#E8E9E1] px-6 py-12 lg:px-20 lg:py-24"}>
                     <div className="w-full flex justify-center">
-                        <div className="w-full max-w-[90%] text-center">
+                        <div className="w-full md:max-w-[90%] text-center">
                             <h2 className={` text-[22px] md:text-[60px] font-semibold mb-10 ${cardo.className}`}>Latest Blogs</h2>
 
-                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-14">
+                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-14">
                                 {blogs.map((blog, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white shadow-sm p-5 hover:shadow-md transition rounded-xl border border-gray-300 flex flex-col overflow-hidden w-full md:w-[390px] min-h-[200px] md:min-h-[500px]"
+                                        className="bg-white shadow-sm p-1 md:p-5 hover:shadow-md transition rounded-xl border border-gray-300 flex flex-col overflow-hidden w-full md:w-[390px] min-h-[200px] md:min-h-[500px]"
                                     >
 
-                                        <div className="relative w-full h-[300px] md:h-[400px]">
+                                        <div className="relative w-full h-[100px] md:h-[400px]">
                                             <Image
                                                 src={blog.image}
                                                 alt={blog.title}
@@ -925,7 +921,7 @@ export default function Glp1Benefits() {
                                                 objectFit="cover"
                                                 className="rounded-2xl"
                                             />
-                                            <span className="absolute top-2 right-2 text-[20px] bg-[#e2ebdf] text-black text-xs font-bold px-3 py-1 rounded-full">
+                                            <span className="absolute top-2 right-2 text-[5px] md:text-[20px] bg-[#e2ebdf] text-black text-xs font-bold px-3 py-1 rounded-full">
                                                 {blog.tag}
                                             </span>
                                         </div>
@@ -945,7 +941,7 @@ export default function Glp1Benefits() {
                                 ))}
                             </div>
 
-                            <button className="mt-10 bg-[#a4af88] hover:bg-[#8f9d6e] text-white px-12 py-4 rounded-full text-[20px] font-bold transition">
+                            <button className="mt-10 bg-[#a4af88] hover:bg-[#8f9d6e] text-white px-6 md:px-12 py-2 md:py-4 rounded-full text-[12px  ] md:text-[20px] font-bold transition">
                                 More Blogs
                             </button>
                         </div>
@@ -1004,7 +1000,7 @@ export default function Glp1Benefits() {
                                         />
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-[75%] grid grid-cols-2 md:grid-cols-4 text-white gap-8 text-[33px] ${manrope.className}">
+                                <div className="w-full lg:w-[75%] grid grid-cols-2 md:grid-cols-4 text-white gap-8 text-[28px] ${manrope.className}">
                                     <div className="space-y-2 flex flex-col">
                                         <Link href="/">Home</Link>
                                         <Link href="#">Early Program</Link>
@@ -1046,7 +1042,7 @@ export default function Glp1Benefits() {
                         </div>
                     </section>
                     <Separator />
-                    <div className=" pt-6 text-[33px] text-center text-white">
+                    <div className=" pt-6 text-[28px] text-center text-white">
                         © 2025 EARLY. All rights reserved.
                     </div>
                 </div>
