@@ -362,18 +362,18 @@ export default function Glp1Benefits() {
               bg-white/10 backdrop-blur-md border border-white/30 rounded-xl
               lg:bg-transparent lg:backdrop-blur-none lg:border-none lg:rounded-none">
 
-                            <h1 className={`sm:text-[60px] md:text-5xl xl:text-7xl font-bold leading-snug ${unna.className}`}>
+                            <h1 className={`text-[30px] md:text-5xl xl:text-7xl font-bold leading-snug ${unna.className}`}>
                                 The LAST weight loss <br /> program you’ll ever try
                             </h1>
 
                             <div className="bg-white inline-block px-4 py-2 rounded-lg text-left shadow-sm">
-                                <p className="text-gray-900 text-[16px] sm:text-[22px] md:text-[30px] font-bold leading-tight">
+                                <p className="text-gray-900 text-[24px] sm:text-[22px] md:text-[30px] font-bold leading-tight">
                                     Up to <span className="text-[24px] sm:text-[30px] md:text-[50px] font-semibold text-[#79855F]">20%*</span><br />
                                     weight loss with GLP-1
                                 </p>
                             </div>
 
-                            <div className="flex flex-wrap sm:flex-nowrap gap-4 w-full">
+                            <div className="flex gap-4 w-full">
                                 <button className="w-full sm:w-[250px] h-[50px] bg-[#D2F47D] text-black text-[14px] sm:text-[18px] md:text-[18px] font-semibold px-5 rounded-full transition whitespace-nowrap">
                                     Book FREE Consultation
                                 </button>
@@ -402,11 +402,8 @@ export default function Glp1Benefits() {
 
                         </div>
                     </div>
-
                 </section>
             </div>
-
-
 
             <div>
                 <section className="py-12 px-6 md:px-16 pt-[100px] bg-[#FAF8F5]">
@@ -804,7 +801,7 @@ export default function Glp1Benefits() {
                         <h2 className={`text-3xl md:text-4xl font-semibold mb-2 ${cardo.className}`}>Pricing (3 Months)</h2>
                         <p className="text-gray-600 mb-8">Explore our plans designed for your unique journey.</p>
 
-                        <div className="bg-[#E8E9E1] p-10">
+                        <div className="bg-[#E8E9E1] p-2 md:p-10">
                             <div className="block md:hidden flex justify-center items-center">
                                 <img src="/assets/Group 1261154645.png" alt="Logo" />
                             </div>
@@ -885,7 +882,7 @@ export default function Glp1Benefits() {
                                     {chunk.map((url, idx) => (
                                         <div
                                             key={idx}
-                                            className="relative w-[450px] h-[150px] overflow-hidden rounded-2xl"
+                                            className="relative w-[150px] md:w-[450px] h-[50px] md:h-[150px] overflow-hidden rounded-2xl"
                                         >
                                             <Image
                                                 src={url}

@@ -67,7 +67,7 @@ export default function AnimatedTestimonials() {
 
   return (
     <div className="w-full overflow-x-hidden py-6">
-      {/* Scrollable Container */}
+      
       <div className="relative">
         <div
           className="flex transition-transform duration-500 ease-in-out gap-6"
