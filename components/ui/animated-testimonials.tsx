@@ -66,7 +66,7 @@ export default function AnimatedTestimonials() {
   }
 
   return (
-    <div className="w-full overflow-x-hidden py-6">
+    <div className="w-full overflow-x-hidden">
 
       <div className="relative">
         <div

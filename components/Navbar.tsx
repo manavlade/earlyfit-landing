@@ -80,10 +80,9 @@ export default function Navbar() {
                 <div className="md:hidden flex items-center space-x-2">
                     <Button
                         variant="ghost"
-                        size="icon"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        {isMenuOpen ? <X className="w-20 h-20" /> : <Menu className="w-24 h-24 text-2xl"  />}
                     </Button>
                 </div>
 

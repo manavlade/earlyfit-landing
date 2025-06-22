@@ -379,10 +379,10 @@ export default function Glp1Benefits() {
                                 The LAST weight loss <br /> program you’ll ever try
                             </h1>
 
-                            <div className="bg-white inline-block px-3 sm:px-4 py-2 rounded-lg text-left shadow-sm">
-                                <p className="text-gray-900 text-base text-md md:text-lg xl:text-2xl font-bold leading-tight">
+                            <div className="bg-white px-4 inline-block sm:px-4 py-2 rounded-lg text-left shadow-sm">
+                                <p className="text-gray-900 text-xl md:text-xl xl:text-2xl font-bold leading-tight">
                                     Up to{" "}
-                                    <span className="text-lg md:text-2xl xl:text-4xl font-semibold text-[#79855F]">
+                                    <span className="text-xl md:text-2xl xl:text-4xl font-semibold text-[#79855F]">
                                         20%*
                                     </span>
                                     <br />
@@ -390,7 +390,7 @@ export default function Glp1Benefits() {
                                 </p>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 w-full">
+                            <div className="flex  gap-4 w-full">
                                 <button className="w-full sm:w-auto px-2 md:px-5 py-2 md:py-3 bg-[#D2F47D] text-black text-sm md:text-md lg:text-xl font-semibold rounded-full transition whitespace-nowrap">
                                     Book FREE Consultation
                                 </button>
@@ -425,12 +425,12 @@ export default function Glp1Benefits() {
             <div>
                 <section className="bg-[#FAF8F5] py-16 px-4 sm:px-8 md:px-16">
                     <div className="flex justify-center w-full">
-                        <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div className="w-full md:max-w-[90%] grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                             <div className="w-full">
-                                <h2 className={`text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
+                                <h2 className={`text-2xl sm:text-2xl md:text-4xl lg:text-5xl text-center md:text-left px-8 md:px-0 font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
                                     Early Leans On GLP-1 To Help You Lose Weight
                                 </h2>
-                                <p className="text-gray-700 text-base sm:text-lg md:text-xl">
+                                <p className="text-gray-700 text-base sm:text-lg md:text-xl px-8 md:px-0 text-center">
                                     GLP-1s are a naturally occurring peptide in the human body. They make you feel full for longer, naturally reducing appetite and cravings.
                                 </p>
                             </div>
@@ -470,17 +470,17 @@ export default function Glp1Benefits() {
                             </div>
 
                             <div className="w-full md:w-1/2 flex flex-col gap-4 text-left">
-                                <p className={`font-bold text-xl md:text-4xl leading-snug px-8 md:px-0 ${unna.className}`}>
+                                <p className={`font-bold text-2xl md:text-4xl leading-snug text-center px-8 md:px-0 ${unna.className}`}>
                                     Rooted in Medical Research and Science
                                 </p>
 
-                                <p className="text-sm md:text-xl px-4 md:px-0">
+                                <p className="text-sm md:text-xl text-center px-8 md:px-0">
                                     <span className="underline pr-2 px-4 md:px-0">Clinical Research</span>
                                     shows that the Early program can help you lose up to 20% of weight,
                                     often 4X more than just diet/exercise alone.
                                 </p>
 
-                                <p className="text-sm md:text-xl px-4 md:px-0">
+                                <p className="text-sm md:text-xl text-center px-8 md:px-0">
                                     GLP-1 when used alone has risks like muscle loss. <br />
                                     Early's program uses pioneering technology, lifestyle coaching and
                                     science to be the safest and most effective long-term weight loss solution.
@@ -506,7 +506,7 @@ export default function Glp1Benefits() {
                                 <p className="text-lg md:text-xl">Just like Biology</p>
 
                                 <div className="flex justify-start pt-5">
-                                    <Button className="bg-[#79855F] w-[150px] md:w-[262px] h-[25px] md:h-[71px] rounded-full px-2 md:px-7 py-2 md:py-8 text-xl md:text-3xl text-white">
+                                    <Button className="bg-[#79855F] w-[150px] md:w-[262px] h-[25px] md:h-[71px] rounded-full px-2 md:px-7 py-0 md:py-8 text-xl md:text-3xl text-white">
                                         Start Early
                                     </Button>
                                 </div>
@@ -609,10 +609,14 @@ export default function Glp1Benefits() {
                         <p className="text-xs md:text-base text-gray-800 items-center text-center">
                             *Medications are only prescribed if your doctor finds them appropriate. If your BMI is under 27, or between <br /> 27-30 without a qualifying health condition, you won’t be eligible, and Metabolic Reset subscription will be refunded.
                         </p>
+
+                        <Button className=" w-full  md:hidden bg-[#6C7D52] text-white px-7 py-2 rounded-full text-sm md:text-base font-bold hover:bg-[#5b6947] transition">
+                            Start EARLY
+                        </Button>
                     </div>
                 </section>
 
-                <div>
+                <div className='px-8'>
 
                     <TestimonialCarousel />
                 </div>
@@ -647,9 +651,9 @@ export default function Glp1Benefits() {
 
                 <section className={"bg-[#F9F8F3] px-6 py-12 lg:px-20 pt-[50px] md:pt-[100px] lg:py-24"}>
                     <div className="w-full flex justify-center">
-                        <div className="w-full max-w-[90%] text-center">
+                        <div className="w-full md:max-w-[90%] text-center">
                             <h2 className={`text-2xl md:text-4xl font-bold text-black mb-10 ${unna.className}`}>
-                                GLP-1 - a <span className="text-black font-bold">REVOLUTION</span> in weight loss,<br />
+                                GLP-1 - a <span className="text-black font-bold">REVOLUTION</span> in weight loss,
                                 <span className="text-black font-bold">TRUSTED</span> by doctors
                             </h2>
 
@@ -662,10 +666,10 @@ export default function Glp1Benefits() {
                                     <ArrowLeft className="w-5 h-5 text-[#02542D]" />
                                 </button>
 
-                                <div className="px-16 overflow-visible relative">
+                                <div className=" px-10 lg:px-16 overflow-visible relative">
                                     <div
                                         ref={scrollRef}
-                                        className="flex overflow-x-auto snap-x snap-mandatory gap-6 no-scrollbar pb-12" // extra bottom space for overflow
+                                        className="flex overflow-x-auto snap-x snap-mandatory gap-6 no-scrollbar pb-12 px-4" 
                                         style={{
                                             scrollbarWidth: "none",
                                             msOverflowStyle: "none",
@@ -676,13 +680,13 @@ export default function Glp1Benefits() {
                                                 key={index}
                                                 className={`snap-start flex-shrink-0 w-full sm:w-full md:w-full
         lg:w-[calc(100%/3-1rem)] bg-[#6d7f59] text-white rounded-xl p-6 pb-20
-        relative flex flex-col justify-end h-[270px] overflow-visible`} // allow overflow
+        relative flex flex-col justify-end h-[220px] overflow-visible`} 
                                             >
-                                                <p className={`text-xs md:text-xl italic mb-2 ${unna.className}`}>
+                                                <p className={`text-md md:text-xl italic mb-2 ${unna.className}`}>
                                                     {item.title}
                                                 </p>
 
-                                                <p className="text-xs md:text-xl">{item.date}</p>
+                                                <p className="text-md md:text-xl">{item.date}</p>
 
                                                 {/* Logo image sticking out of the card */}
                                                 <div className="absolute bottom-0 right-0 translate-y-1/2 z-10">
@@ -922,7 +926,7 @@ export default function Glp1Benefits() {
                         EARLY helps you feel your best, look your best, and improve other important aspects of your life
                     </p>
                     <div className="w-full flex justify-center">
-                        <div className="w-full overflow-hidden flex flex-col gap-6">
+                        <div className="w-full overflow-hidden flex flex-col gap-2 lg:gap-6">
                             {imageChunks.map((chunk, index) => (
                                 <Marquee
                                     key={index}
@@ -933,7 +937,7 @@ export default function Glp1Benefits() {
                                     {chunk.map((url, idx) => (
                                         <div
                                             key={idx}
-                                            className="relative w-[150px] md:w-[450px] h-[50px] md:h-[150px] overflow-hidden rounded-2xl"
+                                            className="relative w-[170px] md:w-[450px] h-[50px] md:h-[150px] overflow-hidden rounded-2xl"
                                         >
                                             <Image
                                                 src={url}
@@ -960,9 +964,9 @@ export default function Glp1Benefits() {
                                 {blogs.map((blog, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white shadow-sm p-2 sm:p-4 md:p-5 hover:shadow-md transition rounded-xl border border-gray-300 flex flex-col overflow-hidden w-full"
+                                        className="bg-white shadow-sm p-1 sm:p-4 md:p-5 hover:shadow-md transition rounded-xl border border-gray-300 flex flex-col overflow-hidden w-full"
                                     >
-                                        <div className="relative w-full h-40 sm:h-60 md:h-72 xl:h-80">
+                                        <div className="relative w-full h-72  md:h-72 xl:h-80">
                                             <Image
                                                 src={blog.image}
                                                 alt={blog.title}
@@ -975,7 +979,7 @@ export default function Glp1Benefits() {
                                         </div>
 
                                         <div className="flex flex-col justify-between flex-grow mt-4">
-                                            <h3 className="text-sm sm:text-base md:text-lg xl:text-xl font-semibold text-left mb-2">
+                                            <h3 className="text-sm sm:text-base md:text-lg xl:text-xl  text-left mb-2">
                                                 {blog.title}
                                             </h3>
 
