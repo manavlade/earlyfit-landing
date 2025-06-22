@@ -264,13 +264,13 @@ const inclusions = [
     },
     {
         label: "Personalized Workout Plan",
-        image: "/assets/Vector (5).png",
+        image: "/assets/Vector (6).png",
         reset: true,
         lite: true,
     },
     {
         label: "24 x 7 Support",
-        image: "/assets/Vector (6).png",
+        image: "/assets/Vector (5).png",
         reset: true,
         lite: false,
     },
@@ -346,9 +346,11 @@ export default function Glp1Benefits() {
             <div>
                 <section className="relative min-h-screen">
                     <div
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+                        className="absolute inset-0 bg-fixed bg-center bg-no-repeat md:hidden"
                         style={{
                             backgroundImage: `url('/assets/mobHome.png')`,
+                            width: "100%",
+                            height: "100%",
                         }}
                     />
                     <div
@@ -669,7 +671,7 @@ export default function Glp1Benefits() {
                                 <div className=" px-10 lg:px-16 overflow-visible relative">
                                     <div
                                         ref={scrollRef}
-                                        className="flex overflow-x-auto snap-x snap-mandatory gap-6 no-scrollbar pb-12 px-4" 
+                                        className="flex overflow-x-auto snap-x snap-mandatory gap-6 no-scrollbar pb-12 px-4"
                                         style={{
                                             scrollbarWidth: "none",
                                             msOverflowStyle: "none",
@@ -680,7 +682,7 @@ export default function Glp1Benefits() {
                                                 key={index}
                                                 className={`snap-start flex-shrink-0 w-full sm:w-full md:w-full
         lg:w-[calc(100%/3-1rem)] bg-[#6d7f59] text-white rounded-xl p-6 pb-20
-        relative flex flex-col justify-end h-[220px] overflow-visible`} 
+        relative flex flex-col justify-end h-[220px] overflow-visible`}
                                             >
                                                 <p className={`text-md md:text-xl italic mb-2 ${unna.className}`}>
                                                     {item.title}
@@ -717,7 +719,7 @@ export default function Glp1Benefits() {
 
                 <section className={"bg-[#F9F8F3] px-6 py-12 pt-[50px] md:pt-[100px] lg:px-20 lg:py-24 font-satoshi"}>
                     <div className="w-full flex justify-center">
-                        <div className="w-full max-w-[90%] grid md:grid-cols-2 items-center">
+                        <div className="w-full md:flex max-w-[90%] grid md:grid-cols-2 items-center">
 
                             <div className="min-w-[70%]">
                                 <h2 className={`text-2xl md:text-4xl lg:text-5xl font-bold mb-4 ${unna.className}`}>
@@ -853,9 +855,9 @@ export default function Glp1Benefits() {
                             <div className=" md:hidden flex justify-center items-center">
                                 <img src="/assets/Group 1261154645.png" alt="Logo" />
                             </div>
-                            <div className="hidden md:block overflow-x-auto rounded-xl border border-gray-300">
-                                <table className="min-w-full text-sm text-gray-800 bg-[#79855F0D] border-separate border-spacing-y-4">
-                                    <thead>
+                            <div className="hidden md:block overflow-x-auto rounded-xl  border-gray-300">
+                                <table className="min-w-full text-sm text-gray-800 bg-[#79855F0D]">
+                                    <thead className='pb-4' >
                                         <tr className="bg-[#79855F] text-white text-sm md:text-base lg:text-lg">
                                             <th className={`p-4 text-left font-bold text-base md:text-2xl lg:text-3xl xl:text-4xl ${cardo.className}`}>
                                                 INCLUSIONS
@@ -875,16 +877,35 @@ export default function Glp1Benefits() {
                                                     <Image src={item.image} alt="Logo" width={20} height={20} />
                                                     <div className="flex">{item.label}</div>
                                                 </td>
-                                                <td className={`p-4 text-center text-base md:text-lg lg:text-xl ${cardo.className}`}>
+                                                <td
+                                                    className={`p-4 text-center text-base md:text-lg lg:text-xl ${cardo.className}`}
+                                                >
                                                     {typeof item.reset === "boolean" ? (
-                                                        <Check className="text-[#79855F] font-extrabold mx-auto" />
+                                                        <div className="flex items-center justify-center">
+                                                            <Image
+                                                                src="/assets/right.png"
+                                                                alt="Logo"
+                                                                width={20}
+                                                                height={20}
+                                                                className="block"
+                                                            />
+                                                        </div>
                                                     ) : (
                                                         item.reset
                                                     )}
                                                 </td>
+
                                                 <td className={`p-4 text-center text-base md:text-lg lg:text-xl ${cardo.className}`}>
                                                     {typeof item.lite === "boolean" ? (
-                                                        <Check className="text-[#79855F] font-extrabold mx-auto" />
+                                                        <div className="flex items-center justify-center">
+                                                            <Image
+                                                                src="/assets/right.png"
+                                                                alt="Logo"
+                                                                width={20}
+                                                                height={20}
+                                                                className="block"
+                                                            />
+                                                        </div>
                                                     ) : (
                                                         item.lite
                                                     )}
@@ -1042,60 +1063,57 @@ export default function Glp1Benefits() {
                 </section>
 
                 <div className='bg-[#434935]' >
-                    <section className=" px-6 py-12 lg:px-20">
-                        <div className="md:max-w-[90%] flex flex-col gap-8">
-                            <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
-                                <div className="w-full lg:w-[25%] space-y-6 pb-16">
-                                    <div className="flex items-center gap-2 p-2">
-                                        <Image
-                                            src="/assets/logo1.png"
-                                            alt="Logo"
-                                            width={200}
-                                            height={200}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="w-full lg:w-[75%] grid grid-cols-2 md:grid-cols-4 text-white gap-8 text-[28px] ${manrope.className}">
-                                    <div className="space-y-2 flex flex-col">
-                                        <Link href="/">Home</Link>
-                                        <Link href="#">Early Program</Link>
-                                        <Link href="#">Medication</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col">
-                                        <Link href="#">Calculators</Link>
-                                        <Link href="#">Blog</Link>
-                                        <Link href="#">Results</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col">
-                                        <Link href="#">About Us</Link>
-                                        <Link href="#">Careers</Link>
-                                        <Link href="#">Contact Us</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col">
-                                        <Link href="#">Terms of Use</Link>
-                                        <Link href="#">Privacy Policy</Link>
-                                    </div>
+                    <section className="px-6 py-12 lg:py-24">
+                        <div className="md:max-w-[90%] w-full mx-auto flex flex-col lg:flex-row gap-8">
+
+                            <div className="w-full lg:w-[35%] flex justify-start pb-10 lg:pb-0">
+                                <div className="flex items-center gap-2">
+                                    <Image
+                                        src="/assets/logo1.png"
+                                        alt="Logo"
+                                        width={200}
+                                        height={200}
+                                    />
                                 </div>
                             </div>
-
-                            <div className="flex items-center gap-4">
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Facebook className="w-8 h-8" />
+                            <div className={`w-full lg:w-[65%] grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-[18px] md:text-[22px] lg:text-[28px] ${manrope.className}`}>
+                                <div className="space-y-2 flex flex-col text-left">
+                                    <Link href="/">Home</Link>
+                                    <Link href="#">Early Program</Link>
+                                    <Link href="#">Medication</Link>
                                 </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Instagram className="w-8 h-8" />
+                                <div className="space-y-2 flex flex-col text-left">
+                                    <Link href="#">Calculators</Link>
+                                    <Link href="#">Blog</Link>
+                                    <Link href="#">Results</Link>
                                 </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Linkedin className="w-8 h-8" />
+                                <div className="space-y-2 flex flex-col text-left">
+                                    <Link href="#">About Us</Link>
+                                    <Link href="#">Careers</Link>
+                                    <Link href="#">Contact Us</Link>
                                 </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <MessageCircle className="w-8 h-8" />
+                                <div className="space-y-2 flex flex-col text-left">
+                                    <Link href="#">Terms of Use</Link>
+                                    <Link href="#">Privacy Policy</Link>
                                 </div>
                             </div>
-
-
+                        </div>
+                        <div className="flex items-center gap-4 pt-10 md:px-16">
+                            <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
+                                <Facebook className="w-8 h-8" />
+                            </div>
+                            <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
+                                <Instagram className="w-8 h-8" />
+                            </div>
+                            <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
+                                <Linkedin className="w-8 h-8" />
+                            </div>
+                            <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
+                                <MessageCircle className="w-8 h-8" />
+                            </div>
                         </div>
                     </section>
+
                     <Separator />
                     <div className=" pt-6 text-[28px] text-center text-white">
                         © 2025 EARLY. All rights reserved.

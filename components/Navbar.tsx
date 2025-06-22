@@ -33,7 +33,7 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`hidden md:flex space-x-5 px-4 py-2 text-md lg:text-lg rounded-full transition-all duration-300 ${isScrolled
+                    className={`hidden lg:flex space-x-5 px-4 py-2 text-md lg:text-lg rounded-full transition-all duration-300 ${isScrolled
                         ? "bg-[#79855F4D]"
                         : "bg-white/10 backdrop-blur-2xl"
                         }`}
@@ -77,7 +77,7 @@ export default function Navbar() {
                 </div>
 
 
-                <div className="md:hidden flex items-center space-x-2">
+                <div className="flex lg:hidden items-center space-x-2">
                     <Button
                         variant="ghost"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -86,7 +86,7 @@ export default function Navbar() {
                     </Button>
                 </div>
 
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                     <Button className="bg-[#393E2C] text-white text-[8px] lg:text-[16px] rounded-full py-2 lg:py-5 px-2 lg:px-12">
                         Start EARLY
                     </Button>
@@ -94,8 +94,8 @@ export default function Navbar() {
             </div>
 
             {isMenuOpen && (
-                <div className="fixed inset-0 z-40 bg-white/70 backdrop-blur-xl md:hidden rounded-l-2xl flex flex-col justify-between px-6 py-8">
-                    {/* Close Button */}
+                <div className="fixed inset-0 z-40 bg-white/70 backdrop-blur-xl lg:hidden rounded-l-2xl flex flex-col justify-between px-6 py-8">
+                  
                     <div className="flex justify-end">
                         <Button
                             variant="ghost"
@@ -107,19 +107,19 @@ export default function Navbar() {
                         </Button>
                     </div>
 
-                    {/* Navigation Links */}
-                    <div className="flex flex-col space-y-4 text-lg text-gray-800 font-medium">
-                        <a href="#" className="border-b pb-2">Home</a>
-                        <a href="#" className="border-b pb-2">Early Program</a>
-                        <a href="#" className="border-b pb-2">Medications</a>
-                        <a href="#" className="border-b pb-2">Calculators</a>
-                        <a href="#" className="border-b pb-2">Blog</a>
-                        <a href="#" className="border-b pb-2">Contact</a>
+                    
+                    <div className="flex flex-col space-y-4 text-lg md:text-5xl text-gray-800 font-medium">
+                        <a href="#" className="border-b pb-2 md:pb-10">Home</a>
+                        <a href="#" className="border-b pb-2 md:pb-10">Early Program</a>
+                        <a href="#" className="border-b pb-2 md:pb-10">Medications</a>
+                        <a href="#" className="border-b pb-2 md:pb-10">Calculators</a>
+                        <a href="#" className="border-b pb-2 md:pb-10">Blog</a>
+                        <a href="#" className="border-b pb-2 md:pb-10">Contact</a>
                     </div>
 
-                    {/* Bottom Button */}
+                    
                     <div className="pt-6">
-                        <Button className="w-full bg-[#393E2C] text-white text-[18px] rounded-full py-3">
+                        <Button className="w-full bg-[#393E2C] text-white text-[18px] md:text-[30px] rounded-full py-3 md:py-10">
                             Start EARLY
                         </Button>
                     </div>
