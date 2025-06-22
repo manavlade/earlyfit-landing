@@ -67,7 +67,7 @@ export default function AnimatedTestimonials() {
 
   return (
     <div className="w-full overflow-x-hidden py-6">
-      
+
       <div className="relative">
         <div
           className="flex transition-transform duration-500 ease-in-out gap-6"
@@ -84,13 +84,14 @@ export default function AnimatedTestimonials() {
             >
               <CardHeader className="pt-6 pb-3">
                 <CardTitle
-                  className={`font-semibold text-[#393E2C] ${isMobile ? "text-[20px]" : "text-[32px]"} ${unna.className}`}
+                  className={`font-semibold text-[#393E2C] ${isMobile ? "text-xl" : "text-3xl"} ${unna.className}`}
                 >
                   {item.title}
                 </CardTitle>
-                <p className={`${isMobile ? "text-[14px]" : "text-[24px]"} text-[#79855F]`}>
+                <p className={`${isMobile ? "text-sm" : "text-2xl"} text-[#79855F]`}>
                   {item.description}
                 </p>
+
               </CardHeader>
               <CardContent className="p-0">
                 <div className={`w-full ${isMobile ? "h-[180px]" : "h-[300px]"} overflow-hidden`}>
