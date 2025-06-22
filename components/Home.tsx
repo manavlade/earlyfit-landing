@@ -348,7 +348,7 @@ export default function Glp1Benefits() {
                     <div
                         className="absolute inset-0 bg-fixed bg-center bg-no-repeat md:hidden"
                         style={{
-                            backgroundImage: `url('/assets/mobHome.png')`,
+                            backgroundImage: `url('/assets/mobileHome.png')`,
                             width: "100%",
                             height: "100%",
                         }}
@@ -741,25 +741,25 @@ export default function Glp1Benefits() {
                                             title: "Hungry Brain",
                                             description:
                                                 "Your Brain’s reward system is highly sensitive to good cues, making it hard to resist cravings.",
-                                            icon: "/assets/vector.png",
+                                            icon: "/assets/brain.png",
                                         },
                                         {
                                             title: "Hungry Gut",
                                             description:
                                                 "Your digestive system empties quickly, sending frequent hunger signals throughout the day.",
-                                            icon: "/assets/vector(1).png",
+                                            icon: "/assets/clock.png",
                                         },
                                         {
                                             title: "Slow Burn",
                                             description:
                                                 "Your metabolism runs efficiently at rest but struggles to adapt to dietary changes.",
-                                            icon: "/assets/vector(2).png",
+                                            icon: "/assets/fire.png",
                                         },
                                         {
                                             title: "Emotional Hunger",
                                             description:
                                                 "Your eating patterns are closely tied to emotional states, stress, and comfort-seeking.",
-                                            icon: "/assets/vector(3).png",
+                                            icon: "/assets/heart.png",
                                         },
                                     ].map((item, idx) => (
                                         <div key={idx} className="border border-[#9CD212] rounded-lg p-4">
