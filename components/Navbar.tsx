@@ -4,8 +4,10 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function Navbar() {
+    const router = useRouter();
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -33,44 +35,44 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`hidden lg:flex space-x-5 px-4 py-2 text-md lg:text-lg rounded-full transition-all duration-300 ${isScrolled
+                    className={`hidden lg:flex space-x-5 px-4 py-2 text-md lg:text-xl rounded-full transition-all duration-300 ${isScrolled
                         ? "bg-[#79855F4D]"
                         : "bg-white/10 backdrop-blur-2xl"
                         }`}
                 >
                     <a
-                        href="#"
-                        className="text-black underline font-bold rounded-full transition-colors"
+                        onClick={() => router.push("/")}
+                        className="text-black underline cursor-pointer font-bold rounded-full transition-colors"
                     >
                         Home
                     </a>
                     <a
-                        href="#"
-                        className="text-black  rounded-full transition-colors"
+                        onClick={() => router.push("/early-fit")}
+                        className="text-black cursor-pointer rounded-full transition-colors"
                     >
                         Early Program
                     </a>
                     <a
-                        href="#"
-                        className="text-black  rounded-full transition-colors"
+                        onClick={() => router.push("/medicines")}
+                        className="text-black cursor-pointer rounded-full transition-colors"
                     >
                         Medications
                     </a>
                     <a
-                        href="#"
-                        className="text-black  rounded-full transition-colors"
+                        onClick={() => router.push("/calculators")}
+                        className="text-black cursor-pointer rounded-full transition-colors"
                     >
                         Calculators
                     </a>
                     <a
-                        href="#"
-                        className="text-black  rounded-full transition-colors"
+                        onClick={() => router.push("/blogs")}
+                        className="text-black cursor-pointer rounded-full transition-colors"
                     >
                         Blog
                     </a>
                     <a
-                        href="#"
-                        className="text-black rounded-full transition-colors"
+                        onClick={() => router.push("/contact")}
+                        className="text-black cursor-pointer rounded-full transition-colors"
                     >
                         Contact
                     </a>
@@ -109,12 +111,12 @@ export default function Navbar() {
 
                     
                     <div className="flex flex-col space-y-4 text-lg md:text-5xl text-gray-800 font-medium">
-                        <a href="#" className="border-b pb-2 md:pb-10">Home</a>
-                        <a href="#" className="border-b pb-2 md:pb-10">Early Program</a>
-                        <a href="#" className="border-b pb-2 md:pb-10">Medications</a>
-                        <a href="#" className="border-b pb-2 md:pb-10">Calculators</a>
-                        <a href="#" className="border-b pb-2 md:pb-10">Blog</a>
-                        <a href="#" className="border-b pb-2 md:pb-10">Contact</a>
+                        <a onClick={() => router.push("/")} className="border-b pb-2 md:pb-10 cursor-pointer">Home</a>
+                        <a onClick={() => router.push("/early-fit")} className="border-b pb-2 md:pb-10 cursor-pointer">Early Program</a>
+                        <a onClick={() => router.push("/medicines")} className="border-b pb-2 md:pb-10 cursor-pointer">Medications</a>
+                        <a onClick={() => router.push("/calculators")} className="border-b pb-2 md:pb-10 cursor-pointer">Calculators</a>
+                        <a onClick={() => router.push("/blog")} className="border-b pb-2 md:pb-10 cursor-pointer">Blog</a>
+                        <a onClick={() => router.push("/contact")} className="border-b pb-2 md:pb-10 cursor-pointer">Contact</a>
                     </div>
 
                     

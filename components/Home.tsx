@@ -679,7 +679,6 @@ export default function Glp1Benefits() {
                             </h2>
 
                             <div className="relative w-full">
-                                {/* Left Arrow */}
                                 <button
                                     onClick={() => scroll("left")}
                                     className="absolute left-0 bg-transparent hover:bg-white top-1/2 -translate-y-1/2 z-20 border border-[#02542D] rounded-full p-2 shadow-md"
@@ -840,8 +839,6 @@ export default function Glp1Benefits() {
                 <section className="bg-[#E8E9E1] px-6 py-12 pt-[100px] lg:px-20 lg:py-24">
                     <div className="w-full flex justify-center">
                         <div className="w-full md:max-w-[90%] flex flex-col md:flex-row gap-10 items-start md:items-center">
-
-                            {/* TEXT: 40% on md+ screens */}
                             <div className="w-full md:w-[40%] flex flex-col">
                                 <div>
                                     <p className={`text-3xl md:text-5xl font-bold text-center md:text-left ${unna.className}`}>

@@ -88,9 +88,9 @@ const Medicinespage = () => {
                 <div className="py-10" >
                     <Navbar />
                 </div>
-                <div className="w-full flex  bg-[] justify-center py-10">
+                <div className="w-full flex  bg-[#] justify-center py-10">
                     <div className="w-[90%] max-w-screen-xl flex flex-col md:flex-row items-center justify-between gap-10">
-                        {/* Text Section */}
+                        
                         <div className="text-center md:text-left flex-1">
                             <p className={`text-3xl md:text-5xl font-semibold mb-6 ${unna.className}`}>
                                 Weight Management Medications

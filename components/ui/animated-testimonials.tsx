@@ -81,7 +81,7 @@ export default function AnimatedTestimonials() {
               <div className="px-2 sm:px-4 md:px-2">
                 <Card
                   key={index}
-                  className="bg-white rounded-2xl shadow-md w-full md:min-w-[300px] lg:min-w-[400px] h-[600px] flex flex-col p-2"
+                  className="bg-white rounded-2xl shadow-md w-full md:min-w-[300px] lg:min-w-[400px] h-[600px] flex flex-col p-0"
                 >
                   <CardHeader className=" flex-grow">
                     <CardTitle
