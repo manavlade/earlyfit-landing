@@ -368,16 +368,22 @@ export default function Glp1Benefits() {
 
                         <div
                             className="
-        absolute bottom-0 left-0 z-10 
-        w-full md:w-4/6 
-        p-4 sm:p-6 md:p-10 
-        text-white space-y-6 
-        bg-white/10 backdrop-blur-md border border-white/30 rounded-xl
-        lg:bg-transparent lg:backdrop-blur-none lg:border-none lg:rounded-none
-        lg:pt-64
-      "
+    absolute bottom-0 left-0 z-10 
+    w-full md:w-4/6 
+    p-4 sm:p-6 md:p-10 
+    text-white space-y-6 
+
+    bg-gradient-to-t from-[#393E2C]/50 to-transparent 
+    backdrop-blur-[10px] rounded-2xl shadow-xl
+
+    lg:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:rounded-none
+    lg:pt-64
+  "
                         >
-                            <h1 className={`text-2xl md:text-2xl xl:text-5xl font-bold leading-snug ${unna.className}`}>
+
+
+
+                            <h1 className={`text-3xl md:text-3xl xl:text-5xl font-bold leading-snug ${unna.className}`}>
                                 The LAST weight loss <br /> program you’ll ever try
                             </h1>
 
@@ -429,7 +435,7 @@ export default function Glp1Benefits() {
                     <div className="flex justify-center w-full">
                         <div className="w-full md:max-w-[90%] grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                             <div className="w-full">
-                                <h2 className={`text-2xl sm:text-2xl md:text-4xl lg:text-5xl text-center md:text-left px-8 md:px-0 font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
+                                <h2 className={`text-2xl sm:text-2xl md:text-4xl lg:text-5xl text-center md:text-left px-6 md:px-0 font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
                                     Early Leans On GLP-1 To Help You Lose Weight
                                 </h2>
                                 <p className="text-gray-700 text-base sm:text-lg md:text-xl px-8 md:px-0 text-center">
@@ -498,23 +504,23 @@ export default function Glp1Benefits() {
                         <div className="w-full md:max-w-[90%] flex flex-col md:flex-row gap-16 lg:gap-32 items-center">
 
                             <div>
-                                <p className={`text-[#79855F] font-bold text-2xl md:text-5xl leading-snug ${unna.className}`}>
+                                <p className={`text-[#79855F] text-center md:text-left font-bold text-3xl md:text-5xl leading-snug ${unna.className}`}>
                                     <span className="whitespace-nowrap">
                                         GLP-1s are <span className="text-black">BETTER</span>
                                     </span>
                                     <br />
                                     with Early
                                 </p>
-                                <p className="text-lg md:text-xl">Just like Biology</p>
+                                <p className="text-xl text-center md:text-left md:text-xl">Just like Biology</p>
 
-                                <div className="flex justify-start pt-5">
-                                    <Button className="bg-[#79855F] w-[150px] md:w-[262px] h-[25px] md:h-[71px] rounded-full px-2 md:px-7 py-0 md:py-8 text-xl md:text-3xl text-white">
+                                <div className="flex justify-center lg:justify-start pt-5">
+                                    <Button className="bg-[#79855F] w-[150px] md:w-[262px] h-[25px] md:h-[71px] rounded-full px-4 md:px-7 py-6 md:py-8 text-xl md:text-3xl text-white">
                                         Start Early
                                     </Button>
                                 </div>
                             </div>
 
-                            <div>
+                            <div className='px-2'>
                                 <AnimatedTestimonials />
                             </div>
 
@@ -522,9 +528,8 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
-
                 <section className="px-4 md:px-16 py-20 pt-[50px] md:pt-[100px] bg-[#FAF8F5]">
-                    <p className={`font-bold text-xl md:text-7xl text-center ${unna.className}`}>
+                    <p className={`font-bold text-3xl md:text-7xl text-center ${unna.className}`}>
                         How Early Works?
                     </p>
                     <p className="text-sm md:text-xl pt-2 text-center">
@@ -534,9 +539,16 @@ export default function Glp1Benefits() {
                     <div className="w-[90%] mx-auto space-y-[30px] mt-10">
                         {/* STEP 1 */}
                         <div className="flex flex-col md:flex-row items-center gap-y-6 md:gap-8 relative">
-                            <div className="w-full md:w-1/4 pb-4">
-                                <Image src="/assets/e1.png" alt="Step 1" width={262} height={294} />
+                            <div className="w-full md:w-1/4 pb-4 flex justify-center items-center">
+                                <Image
+                                    src="/assets/e1.png"
+                                    alt="Step 1"
+                                    width={262}
+                                    height={294}
+                                    className=""
+                                />
                             </div>
+
                             <div className="w-full md:w-3/4 bg-[#E3E6DC] border border-black rounded-xl p-6 relative overflow-visible">
                                 <div className={`absolute -top-7 left-4 bg-[#E6EBE2] border border-black px-4 py-1 rounded-lg text-base md:text-2xl font-semibold text-[#6C7D52] ${unna.className}`}>
                                     STEP 1
@@ -573,9 +585,16 @@ export default function Glp1Benefits() {
 
                         {/* STEP 3 */}
                         <div className="flex flex-col md:flex-row items-center gap-y-6 md:gap-10 relative">
-                            <div className="w-full md:w-1/4 pb-4">
-                                <Image src="/assets/e3.png" alt="Step 3" width={222} height={284} />
+                            <div className="w-full md:w-1/4 pb-4 flex justify-center items-center">
+                                <Image
+                                    src="/assets/e3.png"
+                                    alt="Step 1"
+                                    width={262}
+                                    height={294}
+                                    className=""
+                                />
                             </div>
+
                             <div className="w-full md:w-3/4 bg-[#E3E6DC] border border-black rounded-xl p-6 relative">
                                 <div className={`absolute -top-7 left-4 bg-[#E6EBE2] border border-black px-4 py-1 rounded-lg text-base md:text-2xl font-semibold text-[#6C7D52] ${unna.className}`}>
                                     STEP 3
@@ -682,7 +701,7 @@ export default function Glp1Benefits() {
                                                 key={index}
                                                 className={`snap-start flex-shrink-0 w-full sm:w-full md:w-full
         lg:w-[calc(100%/3-1rem)] bg-[#6d7f59] text-white rounded-xl p-6 pb-20
-        relative flex flex-col justify-end h-[220px] overflow-visible`}
+        relative flex flex-col justify-end h-[250px] overflow-visible`}
                                             >
                                                 <p className={`text-md md:text-xl italic mb-2 ${unna.className}`}>
                                                     {item.title}
@@ -690,7 +709,6 @@ export default function Glp1Benefits() {
 
                                                 <p className="text-md md:text-xl">{item.date}</p>
 
-                                                {/* Logo image sticking out of the card */}
                                                 <div className="absolute bottom-0 right-0 translate-y-1/2 z-10">
                                                     <img
                                                         src={item.sourceLogo}
@@ -719,14 +737,13 @@ export default function Glp1Benefits() {
 
                 <section className={"bg-[#F9F8F3] px-6 py-12 pt-[50px] md:pt-[100px] lg:px-20 lg:py-24 font-satoshi"}>
                     <div className="w-full flex justify-center">
-                        <div className="w-full md:flex max-w-[90%] grid md:grid-cols-2 items-center">
+                        <div className="w-full md:flex max-w-[90%] grid md:grid-cols-2 gap-6 items-center">
 
                             <div className="min-w-[70%]">
-                                <h2 className={`text-2xl md:text-4xl lg:text-5xl font-bold mb-4 ${unna.className}`}>
+                                <h2 className={`text-2xl md:text-4xl lg:text-5xl text-center md:text-left font-bold mb-4 ${unna.className}`}>
                                     Find your <span className="text-[#79855F]">MetabolicType</span>
                                 </h2>
-
-                                <p className="text-gray-700 mb-8 text-xs md:text-md lg:text-xl">
+                                <p className="text-gray-700 mb-8 text-xs md:text-md lg:text-xl text-center md:text-left">
                                     Not all weight gain is the same. Understand your biology—and finally unlock
                                     the approach that works for YOU. Early’s team of super specialist
                                     endocrinologists and nutritionists have created MetabolicType, a research-backed
@@ -787,9 +804,19 @@ export default function Glp1Benefits() {
                                     ))}
                                 </div>
 
-                                <Button className={`bg-[#79855F] md:bg-[#393E2C] w-full text-xs md:text-xl lg:text-2xl text-white px-2 md:px-6 py-2 md:py-6 rounded-full font-semibold ${unna.className}`}>
+                                <Button
+                                    className={`
+    hidden md:flex
+    bg-[#79855F] md:bg-[#393E2C]
+    w-full text-xs md:text-xl lg:text-2xl
+    text-white px-2 md:px-6 py-4 md:py-6
+    rounded-full font-semibold
+    ${unna.className}
+  `}
+                                >
                                     Start EARLY
                                 </Button>
+
                             </div>
 
                             <div className="flex justify-center lg:justify-end min-w-[30%]">
@@ -802,6 +829,10 @@ export default function Glp1Benefits() {
                                 />
                             </div>
 
+                            <Button className={`block md:hidden bg-[#79855F] md:bg-[#393E2C] w-full text-xs md:text-xl lg:text-2xl text-white px-2 md:px-6 py-2 md:py-6 rounded-full font-semibold ${unna.className}`}>
+                                Start EARLY
+                            </Button>
+
                         </div>
                     </div>
                 </section>
@@ -813,15 +844,15 @@ export default function Glp1Benefits() {
                             {/* TEXT: 40% on md+ screens */}
                             <div className="w-full md:w-[40%] flex flex-col">
                                 <div>
-                                    <p className={`text-xl md:text-5xl font-bold text-center md:text-left ${unna.className}`}>
+                                    <p className={`text-3xl md:text-5xl font-bold text-center md:text-left ${unna.className}`}>
                                         Curious about weight
                                         <br />
                                         loss medications?
                                     </p>
-                                    <p className="text-xs md:text-xl text-black font-medium py-4 text-center md:text-left">
+                                    <p className="text-lg md:text-xl text-black font-medium py-4 text-center md:text-left">
                                         GLP-1 weight loss & BMI calculator.
                                     </p>
-                                    <p className="text-xs md:text-xl text-black font-medium text-center md:text-left">
+                                    <p className="text-md md:text-xl text-black font-medium text-center md:text-left">
                                         Minimum average weight loss with proper diet & lifestyle changes.
                                     </p>
                                 </div>
@@ -830,14 +861,14 @@ export default function Glp1Benefits() {
                                     <div className="bg-[#D2F47D] border border-[#D2F47D] w-64 h-64 sm:w-80 sm:h-80 rounded-full flex flex-col items-center justify-center text-center p-6">
                                         <p className={`text-black text-xl sm:text-2xl font-medium leading-snug ${unna.className}`}>
                                             Lose up to <br />
-                                            <span className="text-4xl sm:text-6xl font-bold">20%</span> <br />
+                                            <span className="text-4xl sm:text-7xl font-bold">20%</span> <br />
                                             of your body weight with GLP-1
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="w-full md:w-[60%] mt-10 md:mt-0 flex justify-center">
+                            <div className="w-full md:w-[60%] mt-5 md:mt-0 flex justify-center">
                                 <WeightCalculator />
                             </div>
 
@@ -851,10 +882,13 @@ export default function Glp1Benefits() {
                         <h2 className={`text-3xl md:text-4xl font-semibold mb-2 ${cardo.className}`}>Pricing (3 Months)</h2>
                         <p className="text-gray-600 mb-8">Explore our plans designed for your unique journey.</p>
 
-                        <div className="bg-[#E8E9E1] rounded-xl p-2 md:p-10">
-                            <div className=" md:hidden flex justify-center items-center">
-                                <img src="/assets/Group 1261154645.png" alt="Logo" />
+                        <div className="bg-[#E8E9E1] rounded-xl px-4 py-6 md:p-10">
+                            <div className="bg-[#E8E9E1] py-4">
+                                <div className="md:hidden p-0 flex justify-center items-center">
+                                    <img className="w-full" src="/assets/Group 1261154645.png" alt="Logo" />
+                                </div>
                             </div>
+
                             <div className="hidden md:block overflow-x-auto rounded-xl ">
                                 <div className="mb-6">
                                     <table className="min-w-full text-sm text-gray-800 bg-[#79855F0D] ">
@@ -876,13 +910,13 @@ export default function Glp1Benefits() {
                                                     METABOLIC LITE
                                                 </th>
                                             </tr>
-                                        <br />
+                                            <br />
                                         </thead>
 
 
                                         <tbody>
                                             {inclusions.map((item, index) => (
-                                                <tr key={index} className=" shadow-md border-b border-black  ">
+                                                <tr key={index} className=" shadow-md border-b border-[#79855F]  ">
                                                     <td className={`p-4 text-black font-extrabold flex items-center gap-2 text-base md:text-lg lg:text-xl ${cardo.className}`}>
                                                         <Image src={item.image} alt="Logo" width={20} height={20} />
                                                         <span>{item.label}</span>
@@ -933,11 +967,17 @@ export default function Glp1Benefits() {
                         </div>
 
 
-                        <p className=" text-[7px] md:text-[20px] mt-4 text-gray-600 ">
+                        <p className=" text-[14px] md:text-[20px] mt-4 text-gray-600 ">
                             **Any medication beyond the initial 3 months will be prescribed by your doctor based on your needs."
                             <br />
                             EMI option available
                         </p>
+
+                        <div className="w-full flex py-5 justify-center">
+                            <Button className={`block md:hidden bg-[#79855F] md:bg-[#393E2C] w-full text-xs md:text-xl lg:text-2xl text-white px-2 md:px-6 py-2 md:py-6 rounded-full font-semibold ${unna.className}`}>
+                                Start EARLY
+                            </Button>
+                        </div>
                     </div>
                 </section>
 
@@ -945,7 +985,7 @@ export default function Glp1Benefits() {
                     <p className={`text-[25px] md:text-[50px] text-center font-bold ${cardo.className}`}>
                         Weight loss, and so much more
                     </p>
-                    <p className="text-center text-[20px] pb-10">
+                    <p className="text-center font-semibold text-[20px] pb-10">
                         EARLY helps you feel your best, look your best, and improve other important aspects of your life
                     </p>
                     <div className="w-full flex justify-center">
@@ -955,7 +995,7 @@ export default function Glp1Benefits() {
                                     key={index}
                                     reverse={index % 2 !== 0}
                                     pauseOnHover
-                                    className="py-2"
+                                    className="py-1"
                                 >
                                     {chunk.map((url, idx) => (
                                         <div
@@ -1031,11 +1071,11 @@ export default function Glp1Benefits() {
                         <div className="w-full md:max-w-[90%]">
                             <div className="flex flex-col md:flex-row gap-12 w-full">
                                 <div className="w-full md:w-1/2">
-                                    <p className={`text-[20px] md:text-[60px] font-bold leading-tight ${unna.className}`}>
+                                    <p className={`text-3xl text-center md:text-[60px] font-bold leading-tight ${unna.className}`}>
                                         <span className="text-[#79855F]">Your Questions, </span> <br />
                                         Answered.
                                     </p>
-                                    <p className="flex flex-wrap md:flex-nowrap items-center gap-2 text-[14px] md:text-[25px] mt-4 whitespace-nowrap">
+                                    <p className="flex text-center justify-center flex-wrap md:flex-nowrap items-center gap-2 text-xl md:text-[25px] mt-4 whitespace-nowrap">
                                         Need Help?
                                         <span className="flex items-center gap-1 text-[#79855F] font-semibold cursor-pointer whitespace-nowrap">
                                             Get in touch with us here <ArrowRight className="w-4 h-4 md:w-6 md:h-6" />
@@ -1065,56 +1105,63 @@ export default function Glp1Benefits() {
                 </section>
 
                 <div className='bg-[#434935]' >
-                    <section className="px-6 py-12 lg:py-24">
-                        <div className="md:max-w-[90%] w-full mx-auto flex flex-col lg:flex-row gap-8">
+                    <section className="py-12 lg:py-24">
+                        <div className="w-full px-6 md:px-12 lg:px-20 mx-auto">
+                            <div className="flex flex-col items-start lg:flex-row gap-8">
 
-                            <div className="w-full lg:w-[35%] flex justify-start pb-10 lg:pb-0">
-                                <div className="flex items-center gap-2">
-                                    <Image
-                                        src="/assets/logo1.png"
-                                        alt="Logo"
-                                        width={200}
-                                        height={200}
-                                    />
+                                <div className="w-full pl-10 lg:w-[35%] flex justify-start pb-10 lg:pb-0">
+                                    <div className="flex items-center justify-center gap-2">
+                                        <Image
+                                            src="/assets/logo1.png"
+                                            alt="Logo"
+                                            width={200}
+                                            height={200}
+                                            className='items-center justify-center'
+                                        />
+                                    </div>
+                                </div>
+                              
+
+                                <div className={`w-full lg:w-[65%] grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-[18px] md:text-[22px] lg:text-[24px] ${manrope.className}`}>
+                                    <div className="space-y-2 flex flex-col text-left">
+                                        <Link href="/">Home</Link>
+                                        <Link href="#">Early Program</Link>
+                                        <Link href="#">Medication</Link>
+                                    </div>
+                                    <div className="space-y-2 flex flex-col text-left">
+                                        <Link href="#">Calculators</Link>
+                                        <Link href="#">Blog</Link>
+                                        <Link href="#">Results</Link>
+                                    </div>
+                                    <div className="space-y-2 flex flex-col text-left">
+                                        <Link href="#">About Us</Link>
+                                        <Link href="#">Careers</Link>
+                                        <Link href="#">Contact Us</Link>
+                                    </div>
+                                    <div className="space-y-2 flex flex-col text-left">
+                                        <Link href="#">Terms of Use</Link>
+                                        <Link href="#">Privacy Policy</Link>
+                                    </div>
                                 </div>
                             </div>
-                            <div className={`w-full lg:w-[65%] grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-[18px] md:text-[22px] lg:text-[24px] ${manrope.className}`}>
-                                <div className="space-y-2 flex flex-col text-left">
-                                    <Link href="/">Home</Link>
-                                    <Link href="#">Early Program</Link>
-                                    <Link href="#">Medication</Link>
+
+                            <div className="flex items-center pl-10 gap-4 pt-10">
+                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
+                                    <Facebook className="w-8 h-8" />
                                 </div>
-                                <div className="space-y-2 flex flex-col text-left">
-                                    <Link href="#">Calculators</Link>
-                                    <Link href="#">Blog</Link>
-                                    <Link href="#">Results</Link>
+                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
+                                    <Instagram className="w-8 h-8" />
                                 </div>
-                                <div className="space-y-2 flex flex-col text-left">
-                                    <Link href="#">About Us</Link>
-                                    <Link href="#">Careers</Link>
-                                    <Link href="#">Contact Us</Link>
+                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
+                                    <Linkedin className="w-8 h-8" />
                                 </div>
-                                <div className="space-y-2 flex flex-col text-left">
-                                    <Link href="#">Terms of Use</Link>
-                                    <Link href="#">Privacy Policy</Link>
+                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
+                                    <MessageCircle className="w-8 h-8" />
                                 </div>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4 pt-10 md:px-16">
-                            <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                <Facebook className="w-8 h-8" />
-                            </div>
-                            <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                <Instagram className="w-8 h-8" />
-                            </div>
-                            <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                <Linkedin className="w-8 h-8" />
-                            </div>
-                            <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                <MessageCircle className="w-8 h-8" />
                             </div>
                         </div>
                     </section>
+
 
                     <Separator />
                     <div className=" pt-6 pb-6 text-[28px] text-center text-white">

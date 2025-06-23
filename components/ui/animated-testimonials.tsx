@@ -39,12 +39,15 @@ export default function AnimatedTestimonials() {
   const [startIndex, setStartIndex] = useState(0)
   const [itemsToShow, setItemsToShow] = useState(2)
 
-  // Detect screen size and adjust items per view
   useEffect(() => {
     const updateItemsToShow = () => {
       if (window.innerWidth < 1024) {
         setItemsToShow(1)
-      } else {
+      }
+      else if (window.innerWidth < 1280) {
+        setItemsToShow(3)
+      }
+      else {
         setItemsToShow(2)
       }
     }
@@ -70,41 +73,44 @@ export default function AnimatedTestimonials() {
   )
 
   return (
-    <div className="w-full overflow-hidden">
-      <div className="relative px-4">
-        <div className="flex gap-6 transition-all duration-500 ease-in-out justify-center ">
-          {visibleTestimonials.map((item, index) => (
-            <Card
-              key={index}
-              className="bg-white rounded-2xl shadow-md w-full max-w-md h-[600px] flex flex-col p-0"
-            >
-              <CardHeader className="pt-6 pb-3 px-6 flex-grow">
-                <CardTitle
-                  className={`font-semibold text-[#393E2C] text-3xl ${unna.className}`}
+    <div>
+      <div className="w-full overflow-hidden">
+        <div className="relative px-4 max-w-full overflow-hidden">
+          <div className="flex gap-6  transition-all duration-500 ease-in-out justify-center items-center">
+            {visibleTestimonials.map((item, index) => (
+              <div className="px-2 sm:px-4 md:px-2">
+                <Card
+                  key={index}
+                  className="bg-white rounded-2xl shadow-md w-full md:min-w-[300px] lg:min-w-[400px] h-[600px] flex flex-col p-2"
                 >
-                  {item.title}
-                </CardTitle>
-                <p className="text-2xl text-[#79855F]">{item.description}</p>
-              </CardHeader>
+                  <CardHeader className=" flex-grow">
+                    <CardTitle
+                      className={`font-semibold text-[#393E2C] text-3xl pt-2 ${unna.className}`}
+                    >
+                      {item.title}
+                    </CardTitle>
+                    <p className="text-2xl text-[#79855F]">{item.description}</p>
+                  </CardHeader>
 
-              <CardContent className="p-0">
-                <div className="w-full h-[300px] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={500}
-                    height={300}
-                    className="w-full h-full object-cover rounded-b-2xl"
-                  />
-                </div>
-              </CardContent>
-            </Card>
+                  <CardContent className="p-0">
+                    <div className="w-full h-[300px] overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={500}
+                        height={300}
+                        className="w-full h-full object-cover rounded-b-2xl"
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-
-      <div className="flex justify-end gap-16 mt-16">
+      <div className="flex justify-center gap-16 mt-16">
         <Button
           onClick={handlePrev}
           disabled={startIndex === 0}
