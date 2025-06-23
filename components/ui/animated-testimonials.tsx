@@ -37,98 +37,91 @@ const unna = Unna({
 
 export default function AnimatedTestimonials() {
   const [startIndex, setStartIndex] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
+  const [itemsToShow, setItemsToShow] = useState(2)
 
+  // Detect screen size and adjust items per view
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
+    const updateItemsToShow = () => {
+      if (window.innerWidth < 1024) {
+        setItemsToShow(1)
+      } else {
+        setItemsToShow(2)
+      }
     }
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+
+    updateItemsToShow()
+    window.addEventListener("resize", updateItemsToShow)
+    return () => window.removeEventListener("resize", updateItemsToShow)
   }, [])
 
-  const itemsPerView = 2
-  const cardWidth = isMobile ? 288 : 480
-  const cardGap = 24
-  const translateX = -(startIndex * (cardWidth + cardGap))
+  const handlePrev = () => {
+    setStartIndex((prev) => Math.max(prev - itemsToShow, 0))
+  }
 
   const handleNext = () => {
-    if (startIndex + itemsPerView < testimonials.length) {
-      setStartIndex(startIndex + 1)
-    }
+    setStartIndex((prev) =>
+      Math.min(prev + itemsToShow, testimonials.length - itemsToShow)
+    )
   }
 
-  const handlePrev = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1)
-    }
-  }
+  const visibleTestimonials = testimonials.slice(
+    startIndex,
+    startIndex + itemsToShow
+  )
 
   return (
-    <div className="w-full overflow-x-hidden">
-
-      <div className="relative">
-        <div
-          className="flex transition-transform duration-500 ease-in-out gap-6"
-          style={{
-            transform: `translateX(${translateX}px)`,
-            width: `${(cardWidth + cardGap) * testimonials.length}px`,
-          }}
-        >
-          {testimonials.map((item, index) => (
+    <div className="w-full overflow-hidden">
+      <div className="relative px-4">
+        <div className="flex gap-6 transition-all duration-500 ease-in-out justify-center ">
+          {visibleTestimonials.map((item, index) => (
             <Card
               key={index}
-              className={`bg-white rounded-xl shadow-md h-full p-0 ${isMobile ? "min-w-[18rem] max-w-[18rem]" : "min-w-[30rem]"
-                }`}
+              className="bg-white rounded-2xl shadow-md w-full max-w-md h-[600px] flex flex-col p-0"
             >
-              <CardHeader className="pt-6 pb-3">
+              <CardHeader className="pt-6 pb-3 px-6 flex-grow">
                 <CardTitle
-                  className={`font-semibold text-[#393E2C] ${isMobile ? "text-xl" : "text-3xl"} ${unna.className}`}
+                  className={`font-semibold text-[#393E2C] text-3xl ${unna.className}`}
                 >
                   {item.title}
                 </CardTitle>
-                <p className={`${isMobile ? "text-sm" : "text-2xl"} text-[#79855F]`}>
-                  {item.description}
-                </p>
-
+                <p className="text-2xl text-[#79855F]">{item.description}</p>
               </CardHeader>
+
               <CardContent className="p-0">
-                <div className={`w-full ${isMobile ? "h-[180px]" : "h-[300px]"} overflow-hidden`}>
+                <div className="w-full h-[300px] overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
                     width={500}
                     height={300}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-b-2xl"
                   />
                 </div>
               </CardContent>
             </Card>
+
           ))}
         </div>
       </div>
 
-      {/* Navigation Buttons */}
-      <div className="flex justify-center gap-16 mt-16">
+      <div className="flex justify-end gap-16 mt-16">
         <Button
           onClick={handlePrev}
           disabled={startIndex === 0}
           variant="outline"
           className="rounded-full h-12 w-12 p-0 bg-transparent border border-[#02542D] flex items-center justify-center"
         >
-          <ArrowLeft size={10} className="text-[#02542D] h-12 w-12" />
+          <ArrowLeft className="text-[#02542D] h-6 w-6" />
         </Button>
         <Button
           onClick={handleNext}
-          disabled={startIndex + itemsPerView >= testimonials.length}
+          disabled={startIndex + itemsToShow >= testimonials.length}
           variant="outline"
           className="rounded-full h-12 w-12 p-0 bg-transparent border border-[#02542D] flex items-center justify-center"
         >
-          <ArrowRight size={10} className="text-[#02542D] h-16 w-16" />
+          <ArrowRight className="text-[#02542D] h-6 w-6" />
         </Button>
       </div>
-
     </div>
   )
 }

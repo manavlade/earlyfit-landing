@@ -493,9 +493,9 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
-                <section className={"bg-[#E8E9E1] px-6 py-[50px] overflow-x-hidden  pt-[50px] md:pt-[100px] lg:px-20 lg:py-24"}>
+                <section className={"bg-[#E8E9E1] px-6 py-[50px] overflow-x-hidden  pt-[50px] md:pt-[100px] lg:px-20 "}>
                     <div className="w-full flex justify-center">
-                        <div className="w-full md:max-w-[90%] flex flex-col md:flex-row gap-32 items-center">
+                        <div className="w-full md:max-w-[90%] flex flex-col md:flex-row gap-16 lg:gap-32 items-center">
 
                             <div>
                                 <p className={`text-[#79855F] font-bold text-2xl md:text-5xl leading-snug ${unna.className}`}>
@@ -851,81 +851,83 @@ export default function Glp1Benefits() {
                         <h2 className={`text-3xl md:text-4xl font-semibold mb-2 ${cardo.className}`}>Pricing (3 Months)</h2>
                         <p className="text-gray-600 mb-8">Explore our plans designed for your unique journey.</p>
 
-                        <div className="bg-[#E8E9E1] p-2 md:p-10">
+                        <div className="bg-[#E8E9E1] rounded-xl p-2 md:p-10">
                             <div className=" md:hidden flex justify-center items-center">
                                 <img src="/assets/Group 1261154645.png" alt="Logo" />
                             </div>
-                            <div className="hidden md:block overflow-x-auto rounded-xl  border-gray-300">
-                                <table className="min-w-full text-sm text-gray-800 bg-[#79855F0D]">
-                                    <thead className='pb-4' >
-                                        <tr className="bg-[#79855F] text-white text-sm md:text-base lg:text-lg">
-                                            <th className={`p-4 text-left font-bold text-base md:text-2xl lg:text-3xl xl:text-4xl ${cardo.className}`}>
-                                                INCLUSIONS
-                                            </th>
-                                            <th className={`p-4 text-center font-bold text-base md:text-2xl lg:text-3xl xl:text-4xl ${cardo.className}`}>
-                                                METABOLIC RESET
-                                            </th>
-                                            <th className={`p-4 text-center font-bold text-base md:text-2xl lg:text-3xl xl:text-4xl ${cardo.className}`}>
-                                                METABOLIC LITE
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {inclusions.map((item, index) => (
-                                            <tr key={index} className="bg-[#79855F0D] rounded-xl shadow-sm border border-gray-200">
-                                                <td className={`p-4 text-black font-extrabold flex items-center gap-2 text-base md:text-lg lg:text-xl ${cardo.className}`}>
-                                                    <Image src={item.image} alt="Logo" width={20} height={20} />
-                                                    <div className="flex">{item.label}</div>
+                            <div className="hidden md:block overflow-x-auto rounded-xl ">
+                                <div className="mb-6">
+                                    <table className="min-w-full text-sm text-gray-800 bg-[#79855F0D] ">
+                                        <thead>
+                                            <tr className="bg-[#79855F] text-white text-sm md:text-base lg:text-lg">
+                                                <th
+                                                    className={`p-4 text-left font-bold text-base md:text-2xl lg:text-3xl xl:text-4xl rounded-l-2xl ${cardo.className}`}
+                                                >
+                                                    INCLUSIONS
+                                                </th>
+                                                <th
+                                                    className={`p-4 text-center font-bold text-base md:text-2xl lg:text-3xl xl:text-4xl ${cardo.className}`}
+                                                >
+                                                    METABOLIC RESET
+                                                </th>
+                                                <th
+                                                    className={`p-4 text-center font-bold text-base md:text-2xl lg:text-3xl xl:text-4xl rounded-r-2xl ${cardo.className}`}
+                                                >
+                                                    METABOLIC LITE
+                                                </th>
+                                            </tr>
+                                        <br />
+                                        </thead>
+
+
+                                        <tbody>
+                                            {inclusions.map((item, index) => (
+                                                <tr key={index} className=" shadow-md border-b border-black  ">
+                                                    <td className={`p-4 text-black font-extrabold flex items-center gap-2 text-base md:text-lg lg:text-xl ${cardo.className}`}>
+                                                        <Image src={item.image} alt="Logo" width={20} height={20} />
+                                                        <span>{item.label}</span>
+                                                    </td>
+                                                    <td className={`p-4 text-center text-base md:text-lg lg:text-xl ${cardo.className}`}>
+                                                        {typeof item.reset === "boolean" ? (
+                                                            <div className="flex items-center justify-center">
+                                                                <Image src="/assets/right.png" alt="Logo" width={20} height={20} className="block" />
+                                                            </div>
+                                                        ) : item.reset}
+                                                    </td>
+                                                    <td className={`p-4 text-center text-base md:text-lg lg:text-xl ${cardo.className}`}>
+                                                        {typeof item.lite === "boolean" ? (
+                                                            <div className="flex items-center justify-center">
+                                                                <Image src="/assets/right.png" alt="Logo" width={20} height={20} className="block" />
+                                                            </div>
+                                                        ) : item.lite}
+                                                    </td>
+                                                </tr>
+                                            ))}
+
+                                            <br />
+                                            <tr className="bg-[#79855F] font-semibold my-6">
+                                                <td
+                                                    className={`p-4 text-left text-white text-base md:text-xl lg:text-2xl xl:text-3xl rounded-l-2xl ${cardo.className}`}
+                                                >
+                                                    YOU PAY
                                                 </td>
                                                 <td
-                                                    className={`p-4 text-center text-base md:text-lg lg:text-xl ${cardo.className}`}
+                                                    className={`p-4 text-center text-white text-base md:text-xl lg:text-2xl xl:text-3xl ${cardo.className}`}
                                                 >
-                                                    {typeof item.reset === "boolean" ? (
-                                                        <div className="flex items-center justify-center">
-                                                            <Image
-                                                                src="/assets/right.png"
-                                                                alt="Logo"
-                                                                width={20}
-                                                                height={20}
-                                                                className="block"
-                                                            />
-                                                        </div>
-                                                    ) : (
-                                                        item.reset
-                                                    )}
+                                                    Rs. 64,999
                                                 </td>
-
-                                                <td className={`p-4 text-center text-base md:text-lg lg:text-xl ${cardo.className}`}>
-                                                    {typeof item.lite === "boolean" ? (
-                                                        <div className="flex items-center justify-center">
-                                                            <Image
-                                                                src="/assets/right.png"
-                                                                alt="Logo"
-                                                                width={20}
-                                                                height={20}
-                                                                className="block"
-                                                            />
-                                                        </div>
-                                                    ) : (
-                                                        item.lite
-                                                    )}
+                                                <td
+                                                    className={`p-4 text-center text-white text-base md:text-xl lg:text-2xl xl:text-3xl rounded-r-2xl ${cardo.className}`}
+                                                >
+                                                    Rs. 29,999
                                                 </td>
                                             </tr>
-                                        ))}
 
-                                        <tr className="bg-[#79855F] font-semibold border border-gray-300">
-                                            <td className={`p-4 text-left text-white text-base md:text-xl lg:text-2xl xl:text-3xl ${cardo.className}`}>
-                                                YOU PAY
-                                            </td>
-                                            <td className={`p-4 text-center text-white text-base md:text-xl lg:text-2xl xl:text-3xl ${cardo.className}`}>
-                                                Rs. 64,999
-                                            </td>
-                                            <td className={`p-4 text-center text-white text-base md:text-xl lg:text-2xl xl:text-3xl ${cardo.className}`}>
-                                                Rs. 29,999
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
 
                             </div>
                         </div>
@@ -1076,7 +1078,7 @@ export default function Glp1Benefits() {
                                     />
                                 </div>
                             </div>
-                            <div className={`w-full lg:w-[65%] grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-[18px] md:text-[22px] lg:text-[28px] ${manrope.className}`}>
+                            <div className={`w-full lg:w-[65%] grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-[18px] md:text-[22px] lg:text-[24px] ${manrope.className}`}>
                                 <div className="space-y-2 flex flex-col text-left">
                                     <Link href="/">Home</Link>
                                     <Link href="#">Early Program</Link>
@@ -1115,7 +1117,7 @@ export default function Glp1Benefits() {
                     </section>
 
                     <Separator />
-                    <div className=" pt-6 text-[28px] text-center text-white">
+                    <div className=" pt-6 pb-6 text-[28px] text-center text-white">
                         © 2025 EARLY. All rights reserved.
                     </div>
                 </div>
