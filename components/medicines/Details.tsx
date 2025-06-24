@@ -15,6 +15,7 @@ import { Separator } from "../ui/separator";
 import { Cardo, Manrope, Unna } from "next/font/google";
 import { ArrowLeft, ArrowRight, Facebook, Instagram, Linkedin, MessageCircle, User } from "lucide-react";
 import Link from "next/link";
+import Footer from "../Footer";
 
 const unna = Unna({
     weight: ['400', '700'],
@@ -22,7 +23,6 @@ const unna = Unna({
     variable: '--font-unna',
     display: 'swap',
 });
-
 
 const cardo = Cardo({
     weight: ['400', '700'],
@@ -131,22 +131,49 @@ const Details = () => {
             </div>
             <div>
                 <div className="w-full flex justify-center bg-[#DBDFD2] py-10">
-                    <div className="w-[90%] max-w-screen-xl flex flex-col md:flex-row items-center justify-center gap-10">
-                        <Image
-                            src="/medicines/detail.png"
-                            alt="Detail Illustration"
-                            width={800}
-                            height={700}
-                            className="w-full max-w-xl h-auto"
-                        />
+                    <div className="w-full md:w-[90%] mx-auto bg-[#dbe0d2] rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-16">
+                        <div className="w-full md:w-2/4">
+                            <Image
+                                src="/medicines/detail.png"
+                                alt="Ozempic Injection"
+                                width={600}
+                                height={600}
+                                className="rounded-xl object-cover w-full h-auto"
+                            />
+                        </div>
 
-                        <Image
-                            src="/medicines/detailText.png"
-                            alt="Detail Text"
-                            width={500}
-                            height={500}
-                            className="w-full max-w-md h-auto"
-                        />
+                        <div className="w-full md:w-1/3 space-y-4">
+                            <h2 className="text-2xl md:text-5xl font-bold text-black">OZEMPIC</h2>
+
+                            <div className="flex flex-wrap gap-6">
+                                {["GLP-1", "Semaglutide", "Injection"].map((tag, i) => (
+                                    <span
+                                        key={i}
+                                        className="border border-black rounded-full px-3 py-1 text-sm text-black"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <ul className="space-y-4 text-[24px] font-medium text-black">
+                                {[
+                                    "Lowers blood sugar",
+                                    "Reduces appetite",
+                                    "Regulates insulin",
+                                    "Causes significant weight loss",
+                                ].map((point, i) => (
+                                    <li key={i} className="flex items-center gap-2">
+                                        <span className="w-3 h-3 rounded-full bg-[#607a3e]" />
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <button className="bg-[#607a3e] hover:bg-[#4f6730] text-white font-semibold px-6 py-2 rounded-full text-sm">
+                                Know More
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -155,17 +182,21 @@ const Details = () => {
 
                         <div className="flex-1 text-center md:text-left space-y-6">
                             <p className={`text-3xl font-semibold ${unna.className}`}>What is OZEMPIC?</p>
-                            <p className="text-left">
+                            <p className="text-left px-4 md:px-0">
                                 Ozempic is a drug that is approved by the U.S. Food and Drug Administration (FDA) to
                                 treat Type 2 diabetes and to reduce major heart events in adults who have Type 2 diabetes
                                 and cardiovascular disease. Clinicians prescribe it off-label for weight loss because
                                 clinical evidence shows it also helps people lose weight.
                             </p>
-                            <p className="text-left">
+                            <p className="text-left px-4 md:px-0">
                                 Ozempic is a brand name for semaglutide which Novo Nordisk manufactures.
                                 It is a synthetic version of the GLP-1 hormone.
                             </p>
-                            <Button>Get Started</Button>
+                            <div className="justify-center items-center flex" >
+                                <Button className="text-lg md:text-2xl bg-[#79855F] cursor-pointer rounded-full hover:bg-[#79855F] px-8 py-5">
+                                    Get Started
+                                </Button>
+                            </div>
                         </div>
 
                         <div className="flex-1 flex justify-center">
@@ -182,7 +213,7 @@ const Details = () => {
 
                 <div className="w-full flex justify-center py-10">
                     <div className="min-w-[90%] max-w-screen-xl flex flex-col md:flex-row gap-12 items-center justify-center">
-                        <div className="flex-1 flex justify-center">
+                        <div className="flex-1  hidden md:flex justify-center">
                             <Image
                                 src="/medicines/detail.png"
                                 alt="Detail Illustration"
@@ -193,26 +224,40 @@ const Details = () => {
                         </div>
                         <div className="flex-1 text-center md:text-left space-y-6">
                             <p className={`text-3xl font-semibold ${unna.className}`}>Benefits of Ozempic</p>
-                            <p className="text-left" >
+                            <p className="text-left px-4 md:px-0" >
                                 Expected weight loss depends on the dosage of Ozempic. In one study, people who took
                                 2.4 mg of semaglutide every week for 68 weeks lost an average of 14.9% of their total
                                 body weight. (Safe weight loss is one to two pounds per week.)
                             </p>
-                            <p className="text-left">
+                            <p className="text-left px-4 md:px-0">
                                 Although Ozempic is a diabetes medication, it may have more benefits for off-label use
                                 beyond weight management. Multiple clinical trials funded by Novo Nordisk show semaglutide
                                 can reduce the risk of major cardiovascular events such as heart attack, stroke, or
                                 death in adults with Type 2 diabetes and known heart disease.
                             </p>
-                            <p className="text-left">
+                            <p className="text-left px-4 md:px-0">
                                 Semaglutide improves heart health by lowering blood sugar and helping people lose excess body
                                 weight. Research is ongoing to determine if semaglutide can treat other medical conditions
                             </p>
 
-                            <p className="text-left">
+                            <p className="text-left px-4 md:px-0">
                                 And it’s significant to note that some patients have reported reduced cravings while using semaglutide for weight loss
                             </p>
-                            <Button>Get Started</Button>
+                            <div className="justify-center items-center flex" >
+                                <Button className="text-lg md:text-2xl bg-[#79855F] cursor-pointer rounded-full hover:bg-[#79855F] px-8 py-5">
+                                    Get Started
+                                </Button>
+                            </div>
+                        </div>
+
+                        <div className="flex-1 flex md:hidden justify-center">
+                            <Image
+                                src="/medicines/detail.png"
+                                alt="Detail Illustration"
+                                width={800}
+                                height={700}
+                                className="w-full max-w-xl h-auto"
+                            />
                         </div>
                     </div>
                 </div>
@@ -222,19 +267,23 @@ const Details = () => {
 
                         <div className="flex-1 text-center md:text-left space-y-6">
                             <p className={`text-3xl font-semibold ${unna.className}`}>How does Ozempic work?</p>
-                            <p className="text-left">
+                            <p className="text-left px-4 md:px-0">
                                 When you eat, your food stimulates your gut to release the GLP-1 hormone. GLP-1 helps lower blood glucose (blood sugar) by stimulating insulin release. And insulin helps blood glucose enter your body’s cells for later energy use.
                                 In some people, the gut doesn't make enough natural GLP-1, or the brain isn't sensitive to it
                             </p>
-                            <p className="text-left">
+                            <p className="text-left px-4 md:px-0">
                                 Ozempic is a synthetic GLP-1 RA or glucagon-like peptide-1 receptor agonist. A drug that works as an agonist activates the same cell receptors as the body's natural hormones. So, Ozempic works in the gut like natural GLP-1. Because Ozempic slows digestion,
                                 it helps curb hunger and signal fullness to the brain. As a result, some people with obesity have lost weight while taking i
                             </p>
-                            <p className="text-left">
+                            <p className="text-left  px-4 md:px-0">
                                 Because Ozempic supports a process the body isn’t doing well, it’s intended for long-term use.
                                 It’s important to note that GLP-1 medications don’t work for everyone. There are dozens of biological reasons why people struggle to lose weight.
                             </p>
-                            <Button>Get Started</Button>
+                            <div className="justify-center items-center flex" >
+                                <Button className="text-lg md:text-2xl bg-[#79855F] cursor-pointer rounded-full hover:bg-[#79855F] px-8 py-5">
+                                    Get Started
+                                </Button>
+                            </div>
                         </div>
 
                         <div className="flex-1 flex justify-center">
@@ -249,7 +298,7 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className="w-full bg-[#DBDFD2] flex justify-center py-10">
+                <div className="w-full bg-[#DBDFD2] flex mt-[50px] md:mt-[100px] justify-center py-10">
                     <div className=" flex flex-col md:flex-row  items-center justify-center">
                         <div>
                             <p className="text-3xl md:text-5xl text-center py-6 font-bold" >How to use It</p>
@@ -275,50 +324,52 @@ const Details = () => {
                     </div>
                 </div>
 
-                <section className="w-full py-10">
+                <section className="w-full py-10 mt-[50px] md:mt-[100px]">
                     <div className="w-full flex justify-center">
-                        <div className="w-full md:w-[90%] flex flex-col md:flex-row items-center justify-between mx-auto gap-4">
-                            <p className={`text-3xl md:text-5xl font-bold ${unna.className}`}> Other Medications</p>
-                            <div className="flex gap-10">
-                                <button
-                                    className="bg-transparent hover:bg-white border border-[#02542D] rounded-full p-2 shadow-md"
-                                >
+                        <div className="w-full md:w-[90%] flex flex-col items-center md:items-start mx-auto gap-4">
+                            {/* Title */}
+                            <p className={`text-3xl md:text-5xl font-bold text-center md:text-left w-full ${unna.className}`}>
+                                Other Medications
+                            </p>
+
+                            {/* Arrows */}
+                            <div className=" hidden md:flex  gap-4 self-end">
+                                <button className="bg-transparent hover:bg-white border border-[#02542D] rounded-full p-2 shadow-md">
                                     <ArrowLeft className="w-5 h-5 text-[#02542D]" />
                                 </button>
-                                <button
-                                    className="bg-transparent hover:bg-white border border-[#02542D] rounded-full p-2 shadow-md"
-                                >
+                                <button className="bg-transparent hover:bg-white border border-[#02542D] rounded-full p-2 shadow-md">
                                     <ArrowRight className="w-5 h-5 text-[#02542D]" />
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div className="w-full flex justify-center py-10">
-                        <div className="w-full md:min-w-[90%] mx-auto flex flex-wrap md:flex-nowrap gap-6 items-center justify-center">
+                        <div className="w-full flex flex-wrap gap-6 items-center justify-center">
                             <Image
                                 src="/medicines/med1.png"
                                 alt="Detail Illustration"
                                 width={800}
                                 height={700}
-                                className="w-full max-w-xs md:max-w-sm h-auto"
+                                className="w-full max-w-xs md:max-w-md h-auto"
                             />
                             <Image
                                 src="/medicines/med2.png"
                                 alt="Detail Illustration"
                                 width={800}
                                 height={700}
-                                className="w-full max-w-xs md:max-w-sm h-auto"
+                                className="w-full max-w-xs md:max-w-md h-auto"
                             />
                             <Image
                                 src="/medicines/med3.png"
                                 alt="Detail Illustration"
                                 width={800}
                                 height={700}
-                                className="w-full max-w-xs md:max-w-sm h-auto"
+                                className="w-full max-w-xs md:max-w-md h-auto"
                             />
                         </div>
                     </div>
                 </section>
+
 
                 <section className="w-full py-12 bg-[#DBDFD2]">
                     <div className="w-full md:w-[90%] mx-auto px-4 space-y-10">
@@ -406,70 +457,7 @@ const Details = () => {
                     </div>
                 </section>
 
-                <div className='bg-[#434935]' >
-                    <section className="py-12 lg:py-24">
-                        <div className="w-full px-6 md:px-12 lg:px-20 mx-auto">
-                            <div className="flex flex-col items-start lg:flex-row gap-8">
-
-                                <div className="w-full pl-10 lg:w-[35%] flex justify-start pb-10 lg:pb-0">
-                                    <div className="flex items-center justify-center gap-2">
-                                        <Image
-                                            src="/assets/logo1.png"
-                                            alt="Logo"
-                                            width={200}
-                                            height={200}
-                                            className='items-center justify-center'
-                                        />
-                                    </div>
-                                </div>
-
-
-                                <div className={`w-full lg:w-[65%] grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-[18px] md:text-[22px] lg:text-[24px] ${manrope.className}`}>
-                                    <div className="space-y-2 flex flex-col text-left">
-                                        <Link href="/">Home</Link>
-                                        <Link href="#">Early Program</Link>
-                                        <Link href="#">Medication</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col text-left">
-                                        <Link href="#">Calculators</Link>
-                                        <Link href="#">Blog</Link>
-                                        <Link href="#">Results</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col text-left">
-                                        <Link href="#">About Us</Link>
-                                        <Link href="#">Careers</Link>
-                                        <Link href="#">Contact Us</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col text-left">
-                                        <Link href="#">Terms of Use</Link>
-                                        <Link href="#">Privacy Policy</Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center pl-10 gap-4 pt-10">
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Facebook className="w-8 h-8" />
-                                </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Instagram className="w-8 h-8" />
-                                </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Linkedin className="w-8 h-8" />
-                                </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <MessageCircle className="w-8 h-8" />
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <Separator />
-                    <div className=" pt-6 pb-6 text-[28px] text-center text-white">
-                        © 2025 EARLY. All rights reserved.
-                    </div>
-                </div>
+                <Footer />
 
             </div>
         </div>

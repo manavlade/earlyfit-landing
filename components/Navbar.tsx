@@ -4,12 +4,23 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 
 export default function Navbar() {
     const router = useRouter();
+    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const navItems = [
+        { name: "Home", path: "/" },
+        { name: "Early Program", path: "/early-fit" },
+        { name: "Medications", path: "/medicines" },
+        { name: "Calculators", path: "/calculators" },
+        { name: "Blog", path: "/blogs" },
+        { name: "Contact", path: "/contact" },
+      ];
+    
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,47 +46,19 @@ export default function Navbar() {
                 </div>
 
                 <div
-                    className={`hidden lg:flex space-x-5 px-4 py-2 text-md lg:text-xl rounded-full transition-all duration-300 ${isScrolled
-                        ? "bg-[#79855F4D]"
-                        : "bg-white/10 backdrop-blur-2xl"
+                    className={`hidden lg:flex space-x-5 px-4 py-2 text-md lg:text-xl rounded-full transition-all duration-300 ${isScrolled ? "bg-[#79855F4D]" : "bg-white/10 backdrop-blur-2xl"
                         }`}
                 >
-                    <a
-                        onClick={() => router.push("/")}
-                        className="text-black underline cursor-pointer font-bold rounded-full transition-colors"
-                    >
-                        Home
-                    </a>
-                    <a
-                        onClick={() => router.push("/early-fit")}
-                        className="text-black cursor-pointer rounded-full transition-colors"
-                    >
-                        Early Program
-                    </a>
-                    <a
-                        onClick={() => router.push("/medicines")}
-                        className="text-black cursor-pointer rounded-full transition-colors"
-                    >
-                        Medications
-                    </a>
-                    <a
-                        onClick={() => router.push("/calculators")}
-                        className="text-black cursor-pointer rounded-full transition-colors"
-                    >
-                        Calculators
-                    </a>
-                    <a
-                        onClick={() => router.push("/blogs")}
-                        className="text-black cursor-pointer rounded-full transition-colors"
-                    >
-                        Blog
-                    </a>
-                    <a
-                        onClick={() => router.push("/contact")}
-                        className="text-black cursor-pointer rounded-full transition-colors"
-                    >
-                        Contact
-                    </a>
+                    {navItems.map((item) => (
+                        <a
+                            key={item.path}
+                            onClick={() => router.push(item.path)}
+                            className={`cursor-pointer rounded-full transition-colors text-black font-medium ${pathname === item.path ? "underline font-bold" : ""
+                                }`}
+                        >
+                            {item.name}
+                        </a>
+                    ))}
                 </div>
 
 
@@ -84,7 +67,7 @@ export default function Navbar() {
                         variant="ghost"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                        {isMenuOpen ? <X className="w-20 h-20" /> : <Menu className="w-24 h-24 text-2xl"  />}
+                        {isMenuOpen ? <X className="w-20 h-20" /> : <Menu className="w-24 h-24 text-2xl" />}
                     </Button>
                 </div>
 
@@ -97,7 +80,7 @@ export default function Navbar() {
 
             {isMenuOpen && (
                 <div className="fixed inset-0 z-40 bg-white/70 backdrop-blur-xl lg:hidden rounded-l-2xl flex flex-col justify-between px-6 py-8">
-                  
+
                     <div className="flex justify-end">
                         <Button
                             variant="ghost"
@@ -109,7 +92,7 @@ export default function Navbar() {
                         </Button>
                     </div>
 
-                    
+
                     <div className="flex flex-col space-y-4 text-lg md:text-5xl text-gray-800 font-medium">
                         <a onClick={() => router.push("/")} className="border-b pb-2 md:pb-10 cursor-pointer">Home</a>
                         <a onClick={() => router.push("/early-fit")} className="border-b pb-2 md:pb-10 cursor-pointer">Early Program</a>
@@ -119,7 +102,7 @@ export default function Navbar() {
                         <a onClick={() => router.push("/contact")} className="border-b pb-2 md:pb-10 cursor-pointer">Contact</a>
                     </div>
 
-                    
+
                     <div className="pt-6">
                         <Button className="w-full bg-[#393E2C] text-white text-[18px] md:text-[30px] rounded-full py-3 md:py-10">
                             Start EARLY

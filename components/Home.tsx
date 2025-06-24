@@ -42,6 +42,7 @@ import AnimatedTestimonials from './ui/animated-testimonials';
 import { useRef } from 'react';
 import { Separator } from './ui/separator';
 import { url } from 'inspector';
+import Footer from './Footer';
 
 
 const unna = Unna({
@@ -438,7 +439,7 @@ export default function Glp1Benefits() {
                                 <h2 className={`text-2xl sm:text-2xl md:text-4xl lg:text-5xl text-center md:text-left px-6 md:px-0 font-bold text-gray-900 mb-6 leading-snug ${unna.className}`}>
                                     Early Leans On GLP-1 To Help You Lose Weight
                                 </h2>
-                                <p className="text-gray-700 text-base sm:text-lg md:text-xl px-8 md:px-0 text-center">
+                                <p className="text-gray-700 text-base sm:text-lg md:text-xl px-8 md:px-0 text-center md:text-left">
                                     GLP-1s are a naturally occurring peptide in the human body. They make you feel full for longer, naturally reducing appetite and cravings.
                                 </p>
                             </div>
@@ -465,30 +466,30 @@ export default function Glp1Benefits() {
 
                 <section className="px-6 py-12 md:py-16 bg-[#FAF8F5] pt-[50px] md:pt-[100px]">
                     <div className="w-full flex justify-center">
-                        <div className="w-full md:max-w-[90%] flex flex-col-reverse md:flex-row justify-between gap-12 md:gap-40 items-center px-0 md:px-10">
+                        <div className="w-full md:max-w-[90%] flex flex-col-reverse md:flex-row justify-between gap-6 md:gap-10 items-center px-0 md:px-10">
 
-                            <div className="w-full md:w-1/2">
+                            <div className="w-full md:w-2/3">
                                 <Image
                                     src="/assets/graph.png"
                                     alt="graph"
                                     width={1500}
                                     height={1200}
-                                    className="w-full h-auto max-w-[120%] md:max-w-full rounded-[20px]"
+                                    className="w-full h-auto max-w-[120%] md:max-w-[120%] rounded-[20px]"
                                 />
                             </div>
 
-                            <div className="w-full md:w-1/2 flex flex-col gap-4 text-left">
-                                <p className={`font-bold text-2xl md:text-4xl leading-snug text-center px-8 md:px-0 ${unna.className}`}>
+                            <div className="w-full md:w-1/3 flex flex-col gap-4 text-left">
+                                <p className={`font-bold text-2xl md:text-4xl leading-snug text-center md:text-left px-8 md:px-0 ${unna.className}`}>
                                     Rooted in Medical Research and Science
                                 </p>
 
-                                <p className="text-sm md:text-xl text-center px-8 md:px-0">
-                                    <span className="underline pr-2 px-4 md:px-0">Clinical Research</span>
+                                <p className="text-sm md:text-xl text-center md:text-left px-2 md:px-0">
+                                    <span className="underline pr-2 px-2 md:px-0">Clinical Research</span>
                                     shows that the Early program can help you lose up to 20% of weight,
                                     often 4X more than just diet/exercise alone.
                                 </p>
 
-                                <p className="text-sm md:text-xl text-center px-8 md:px-0">
+                                <p className="text-sm md:text-xl text-center md:text-left px-2 md:px-0">
                                     GLP-1 when used alone has risks like muscle loss. <br />
                                     Early's program uses pioneering technology, lifestyle coaching and
                                     science to be the safest and most effective long-term weight loss solution.
@@ -499,7 +500,7 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
-                <section className={"bg-[#E8E9E1] px-6 py-[50px] overflow-x-hidden  pt-[50px] md:pt-[100px] lg:px-20 "}>
+                <section className={"bg-[#E8E9E1] px-6 py-[50px] overflow-x-hidden  pt-[60px] md:pt-[100px] lg:px-20 "}>
                     <div className="w-full flex justify-center">
                         <div className="w-full md:max-w-[90%] flex flex-col md:flex-row gap-16 lg:gap-32 items-center">
 
@@ -511,7 +512,7 @@ export default function Glp1Benefits() {
                                     <br />
                                     with Early
                                 </p>
-                                <p className="text-xl text-center md:text-left md:text-xl">Just like Biology</p>
+                                <p className="text-xl text-center md:text-left md:text-xl">Just like your Biology</p>
 
                                 <div className="flex justify-center lg:justify-start pt-5">
                                     <Button className="bg-[#79855F] w-[150px] md:w-[262px] h-[25px] md:h-[71px] rounded-full px-4 md:px-7 py-6 md:py-8 text-xl md:text-3xl text-white">
@@ -578,8 +579,14 @@ export default function Glp1Benefits() {
                                     We help you setup the Early App, your at-home blood tests, smart scale delivery, and your first consult with an Early Endocrinologist. The Early app connects your CGM, fitness tracker, and scale, and brings your care team, data, and daily plan into one place.
                                 </p>
                             </div>
-                            <div className="w-full md:w-1/4 pb-4">
-                                <Image src="/assets/e2.png" alt="Step 2" width={322} height={304} />
+                            
+                            <div className="w-full md:w-1/4 pb-4 flex justify-center items-center">
+                                <Image
+                                    src="/assets/e2.png"
+                                    alt="Step 1"
+                                    width={322} height={304}
+                                    className=""
+                                />
                             </div>
                         </div>
 
@@ -1101,70 +1108,7 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
-                <div className='bg-[#434935]' >
-                    <section className="py-12 lg:py-24">
-                        <div className="w-full px-6 md:px-12 lg:px-20 mx-auto">
-                            <div className="flex flex-col items-start lg:flex-row gap-8">
-
-                                <div className="w-full pl-10 lg:w-[35%] flex justify-start pb-10 lg:pb-0">
-                                    <div className="flex items-center justify-center gap-2">
-                                        <Image
-                                            src="/assets/logo1.png"
-                                            alt="Logo"
-                                            width={200}
-                                            height={200}
-                                            className='items-center justify-center'
-                                        />
-                                    </div>
-                                </div>
-                              
-
-                                <div className={`w-full lg:w-[65%] grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-[18px] md:text-[22px] lg:text-[24px] ${manrope.className}`}>
-                                    <div className="space-y-2 flex flex-col text-left">
-                                        <Link href="/">Home</Link>
-                                        <Link href="#">Early Program</Link>
-                                        <Link href="#">Medication</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col text-left">
-                                        <Link href="#">Calculators</Link>
-                                        <Link href="#">Blog</Link>
-                                        <Link href="#">Results</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col text-left">
-                                        <Link href="#">About Us</Link>
-                                        <Link href="#">Careers</Link>
-                                        <Link href="#">Contact Us</Link>
-                                    </div>
-                                    <div className="space-y-2 flex flex-col text-left">
-                                        <Link href="#">Terms of Use</Link>
-                                        <Link href="#">Privacy Policy</Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center pl-10 gap-4 pt-10">
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Facebook className="w-8 h-8" />
-                                </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Instagram className="w-8 h-8" />
-                                </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <Linkedin className="w-8 h-8" />
-                                </div>
-                                <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                    <MessageCircle className="w-8 h-8" />
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <Separator />
-                    <div className=" pt-6 pb-6 text-[28px] text-center text-white">
-                        © 2025 EARLY. All rights reserved.
-                    </div>
-                </div>
+                <Footer />
             </div>
 
 

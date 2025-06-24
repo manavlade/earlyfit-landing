@@ -1,14 +1,9 @@
+"use client"
 import Image from "next/image"
 import { Button } from "../ui/button"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import Navbar from "../Navbar"
 import { Separator } from "../ui/separator"
-import Link from "next/link"
-import {
-    Facebook, Instagram, Linkedin, MessageCircle,
-} from "lucide-react"
-
-
 import {
     Accordion,
     AccordionContent,
@@ -16,6 +11,8 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Cardo, Manrope, Unna } from "next/font/google"
+import Footer from "../Footer"
+import { useRouter } from "next/navigation"
 
 const unna = Unna({
     weight: ['400', '700'],
@@ -82,13 +79,14 @@ const faqData = [
 ]
 
 const Medicinespage = () => {
+    const router = useRouter();
     return (
         <>
             <div>
                 <div className="py-10" >
                     <Navbar />
                 </div>
-                <div className="w-full flex  bg-[#] justify-center py-10">
+                <div className="w-full flex  bg-[#FAF8F5] justify-center py-10">
                     <div className="w-[90%] max-w-screen-xl flex flex-col md:flex-row items-center justify-between gap-10">
                         
                         <div className="text-center md:text-left flex-1">
@@ -130,7 +128,7 @@ const Medicinespage = () => {
                 <div>
                     <div className="w-full flex justify-center py-10">
                         <div className="w-[90%] max-w-screen-xl flex items-center justify-between text-center gap-4">
-                            <div>
+                        <div className="hidden md:flex" >
                                 <Button
                                     variant="outline"
                                     className="rounded-full h-12 w-12 p-0 bg-transparent border border-[#02542D]"
@@ -141,22 +139,25 @@ const Medicinespage = () => {
 
                             <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                                 <Image
+                                
                                     src="/medicines/mr(2).png"
                                     alt="medicine"
                                     width={1200}
                                     height={1200}
-                                    className="w-auto md:min-w-[500px] h-auto"
+                                    className="w-auto cursor-pointer md:min-w-[500px] h-auto"
+                                    onClick={()=>router.push('/medicines/1')}
                                 />
                                 <Image
                                     src="/medicines/mr(1).png"
                                     alt="medicine"
                                     width={1200}
                                     height={1200}
-                                    className="w-auto md:min-w-[500px] h-auto"
+                                    className="w-auto cursor-pointer md:min-w-[500px] h-auto"
+                                    onClick={()=>router.push('/medicines/2')}
                                 />
                             </div>
 
-                            <div>
+                            <div className="hidden md:flex" >
                                 <Button
                                     variant="outline"
                                     className="rounded-full h-12 w-12 p-0 bg-transparent border border-[#02542D] flex items-center justify-center"
@@ -219,63 +220,7 @@ const Medicinespage = () => {
                             </div>
                         </section>
 
-                        <div className='bg-[#434935]' >
-                            <section className="px-6 py-12 lg:py-24">
-                                <div className="md:max-w-[90%] w-full mx-auto flex flex-col lg:flex-row gap-8">
-
-                                    <div className="w-full lg:w-[35%] flex justify-start pb-10 lg:pb-0">
-                                        <div className="flex items-center gap-2">
-                                            <Image
-                                                src="/assets/logo1.png"
-                                                alt="Logo"
-                                                width={200}
-                                                height={200}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className={`w-full lg:w-[65%] grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-[18px] md:text-[22px] lg:text-[24px] ${manrope.className}`}>
-                                        <div className="space-y-2 flex flex-col text-left">
-                                            <Link href="/">Home</Link>
-                                            <Link href="#">Early Program</Link>
-                                            <Link href="#">Medication</Link>
-                                        </div>
-                                        <div className="space-y-2 flex flex-col text-left">
-                                            <Link href="#">Calculators</Link>
-                                            <Link href="#">Blog</Link>
-                                            <Link href="#">Results</Link>
-                                        </div>
-                                        <div className="space-y-2 flex flex-col text-left">
-                                            <Link href="#">About Us</Link>
-                                            <Link href="#">Careers</Link>
-                                            <Link href="#">Contact Us</Link>
-                                        </div>
-                                        <div className="space-y-2 flex flex-col text-left">
-                                            <Link href="#">Terms of Use</Link>
-                                            <Link href="#">Privacy Policy</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-4 pt-10 md:px-16">
-                                    <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                        <Facebook className="w-8 h-8" />
-                                    </div>
-                                    <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                        <Instagram className="w-8 h-8" />
-                                    </div>
-                                    <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                        <Linkedin className="w-8 h-8" />
-                                    </div>
-                                    <div className="p-2 bg-white rounded-full hover:bg-white/20 transition cursor-pointer">
-                                        <MessageCircle className="w-8 h-8" />
-                                    </div>
-                                </div>
-                            </section>
-
-                            <Separator />
-                            <div className=" pt-6 pb-6 text-[28px] text-center text-white">
-                                © 2025 EARLY. All rights reserved.
-                            </div>
-                        </div>
+                        <Footer/>
                     </div>
 
                 </div>

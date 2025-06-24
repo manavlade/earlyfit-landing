@@ -44,9 +44,7 @@ export default function AnimatedTestimonials() {
       if (window.innerWidth < 1024) {
         setItemsToShow(1)
       }
-      else if (window.innerWidth < 1280) {
-        setItemsToShow(3)
-      }
+     
       else {
         setItemsToShow(2)
       }
@@ -75,7 +73,7 @@ export default function AnimatedTestimonials() {
   return (
     <div>
       <div className="w-full overflow-hidden">
-        <div className="relative px-4 max-w-full overflow-hidden">
+        <div className="relative  max-w-full overflow-hidden">
           <div className="flex gap-6  transition-all duration-500 ease-in-out justify-center items-center">
             {visibleTestimonials.map((item, index) => (
               <div className="px-2 sm:px-4 md:px-2">
