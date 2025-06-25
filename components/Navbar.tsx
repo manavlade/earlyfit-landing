@@ -35,13 +35,13 @@ export default function Navbar() {
             className={`fixed top-0 w-full z-50 transition-colors duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-rgb(177, 190, 168) bg-opacity-90"
                 }`}
         >
-            <div className=" px-2 md:px-10 flex items-center justify-between py-2 ">
+            <div className=" px-2 md:px-10 flex items-center justify-between py-6 ">
                 <div className="flex items-center space-x-4">
                     <Image
                         src={"/assets/logo.png"}
                         alt="Logo"
-                        width={150}
-                        height={150}
+                        width={120}
+                        height={120}
                     />
                 </div>
 
@@ -62,13 +62,12 @@ export default function Navbar() {
                 </div>
 
 
-                <div className="flex lg:hidden items-center space-x-2">
-                    <Button
-                        variant="ghost"
+                <div className="flex lg:hidden items-center space-x-4">
+                    <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                        {isMenuOpen ? <X className="w-20 h-20" /> : <Menu className="w-24 h-24 text-2xl" />}
-                    </Button>
+                        {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+                    </button>
                 </div>
 
                 <div className="hidden lg:block">

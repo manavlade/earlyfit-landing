@@ -113,7 +113,7 @@ const Footer = () => {
 
 
                     <Separator />
-                    <div className=" pt-6 pb-6 text-[28px] text-center text-white">
+                    <div className=" pt-6 pb-6 text-[20px] text-center text-white">
                         © 2025 EARLY. All rights reserved.
                     </div>
                 </div>

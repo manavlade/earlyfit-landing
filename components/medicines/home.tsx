@@ -88,7 +88,7 @@ const Medicinespage = () => {
                 </div>
                 <div className="w-full flex  bg-[#FAF8F5] justify-center py-10">
                     <div className="w-[90%] max-w-screen-xl flex flex-col md:flex-row items-center justify-between gap-10">
-                        
+
                         <div className="text-center md:text-left flex-1">
                             <p className={`text-3xl md:text-5xl font-semibold mb-6 ${unna.className}`}>
                                 Weight Management Medications
@@ -101,7 +101,7 @@ const Medicinespage = () => {
                                 trials show obese people who use these medications can reduce up to 20% body weight
                                 on average.
                             </p>
-                            <Button className="text-lg md:text-2xl bg-[#79855F] rounded-2xl px-8 py-4">
+                            <Button className="text-lg md:text-2xl bg-[#79855F] rounded-full px-8 py-6">
                                 Get Started
                             </Button>
                         </div>
@@ -128,7 +128,7 @@ const Medicinespage = () => {
                 <div>
                     <div className="w-full flex justify-center py-10">
                         <div className="w-[90%] max-w-screen-xl flex items-center justify-between text-center gap-4">
-                        <div className="hidden md:flex" >
+                            <div className="hidden md:flex" >
                                 <Button
                                     variant="outline"
                                     className="rounded-full h-12 w-12 p-0 bg-transparent border border-[#02542D]"
@@ -139,22 +139,23 @@ const Medicinespage = () => {
 
                             <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                                 <Image
-                                
-                                    src="/medicines/mr(2).png"
-                                    alt="medicine"
-                                    width={1200}
-                                    height={1200}
-                                    className="w-auto cursor-pointer md:min-w-[500px] h-auto"
-                                    onClick={()=>router.push('/medicines/1')}
-                                />
-                                <Image
                                     src="/medicines/mr(1).png"
                                     alt="medicine"
                                     width={1200}
                                     height={1200}
                                     className="w-auto cursor-pointer md:min-w-[500px] h-auto"
-                                    onClick={()=>router.push('/medicines/2')}
+                                    onClick={() => router.push('/medicines/2')}
                                 />
+                                <Image
+
+                                    src="/medicines/mr(2).png"
+                                    alt="medicine"
+                                    width={1200}
+                                    height={1200}
+                                    className="w-auto cursor-pointer md:min-w-[500px] h-auto"
+                                    onClick={() => router.push('/medicines/1')}
+                                />
+
                             </div>
 
                             <div className="hidden md:flex" >
@@ -168,7 +169,7 @@ const Medicinespage = () => {
                         </div>
                     </div>
 
-                    <div className="bg-[#DBDFD2]" >
+                    <div className="bg-[#DBDFD2] px-16" >
                         <div className="w-full flex flex-col space-y-6 items-center justify-center py-20" >
                             <p className={`text-2xl md:text-5xl font-semibold text-center ${unna.className}`} >Looking for a Smarter Way to Lose Weight?</p>
                             <Image
@@ -176,7 +177,7 @@ const Medicinespage = () => {
                                 alt="medicine"
                                 width={1200}
                                 height={1200}
-                                className="w-auto md:min-w-[500px] h-auto"
+                                className="w-full h-auto"
                             />
                         </div>
                     </div>
@@ -220,7 +221,7 @@ const Medicinespage = () => {
                             </div>
                         </section>
 
-                        <Footer/>
+                        <Footer />
                     </div>
 
                 </div>

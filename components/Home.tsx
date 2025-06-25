@@ -347,7 +347,7 @@ export default function Glp1Benefits() {
             <div>
                 <section className="relative min-h-screen">
                     <div
-                        className="absolute inset-0 bg-fixed bg-center bg-no-repeat md:hidden"
+                        className="absolute inset-0 bg-center md:hidden"
                         style={{
                             backgroundImage: `url('/assets/mobileHome.png')`,
                             width: "100%",
@@ -466,21 +466,21 @@ export default function Glp1Benefits() {
 
                 <section className="px-6 py-12 md:py-16 bg-[#FAF8F5] pt-[50px] md:pt-[100px]">
                     <div className="w-full flex justify-center">
-                        <div className="w-full md:max-w-[90%] flex flex-col-reverse md:flex-row justify-between gap-6 md:gap-10 items-center px-0 md:px-10">
+                        <div className="w-full md:max-w-[90%] flex flex-col-reverse md:flex-row justify-between gap-6  items-center px-0 md:px-10">
 
-                            <div className="w-full md:w-2/3">
+                            <div className="w-full md:w-1/2">
                                 <Image
                                     src="/assets/graph.png"
                                     alt="graph"
                                     width={1500}
                                     height={1200}
-                                    className="w-full h-auto max-w-[120%] md:max-w-[120%] rounded-[20px]"
+                                    className="w-full h-auto max-w-[120%] md:max-w-[100%] rounded-[20px]"
                                 />
                             </div>
 
                             <div className="w-full md:w-1/3 flex flex-col gap-4 text-left">
                                 <p className={`font-bold text-2xl md:text-4xl leading-snug text-center md:text-left px-8 md:px-0 ${unna.className}`}>
-                                    Rooted in Medical Research and Science
+                                    Rooted in Medical <br /> Research and Science
                                 </p>
 
                                 <p className="text-sm md:text-xl text-center md:text-left px-2 md:px-0">
@@ -579,7 +579,7 @@ export default function Glp1Benefits() {
                                     We help you setup the Early App, your at-home blood tests, smart scale delivery, and your first consult with an Early Endocrinologist. The Early app connects your CGM, fitness tracker, and scale, and brings your care team, data, and daily plan into one place.
                                 </p>
                             </div>
-                            
+
                             <div className="w-full md:w-1/4 pb-4 flex justify-center items-center">
                                 <Image
                                     src="/assets/e2.png"
@@ -643,11 +643,13 @@ export default function Glp1Benefits() {
                         </Button>
                     </div>
                 </section>
-
-                <div className='px-8'>
-
-                    <TestimonialCarousel />
+                ्
+                <div className='bg-[#E8E9E1] md:bg-[#F9F8F3]' >
+                    <div className='px-8'>
+                        <TestimonialCarousel />
+                    </div>
                 </div>
+
 
                 {/* <section className={"py-16 bg-[#fefdfc] text-center px-6"}>
                     <h2 className={`text-3xl md:text-4xl font-bold mb-12 ${unna.className}`}>Leading Doctors</h2>
@@ -677,7 +679,7 @@ export default function Glp1Benefits() {
                     </div>
                 </section> */}
 
-                <section className={"bg-[#F9F8F3] px-6 py-12 lg:px-20 pt-[50px] md:pt-[100px] lg:py-24"}>
+                <section className={"bg-[#E8E9E1] px-6 py-12 lg:px-20 pt-[50px] md:pt-[100px] lg:py-24"}>
                     <div className="w-full flex justify-center">
                         <div className="w-full md:max-w-[90%] text-center">
                             <h2 className={`text-2xl md:text-4xl font-bold text-black mb-10 ${unna.className}`}>
@@ -790,8 +792,8 @@ export default function Glp1Benefits() {
                                                 <Image
                                                     src={item.icon}
                                                     alt={item.title}
-                                                    width={48}
-                                                    height={48}
+                                                    width={42}
+                                                    height={42}
                                                     className="w-full h-full object-contain"
                                                 />
                                             </div>
@@ -985,11 +987,11 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
-                <section className="bg-[#f0f1ea] py-14 px-4 space-y-6 pt-[50px] md:pt-[100px]">
-                    <p className={`text-[25px] md:text-[50px] text-center font-bold ${cardo.className}`}>
+                <section className="bg-[#E8E9E1] py-14 px-4 space-y-6 pt-[50px] md:pt-[100px]">
+                    <p className={`text-3xl md:text-5xl text-center font-bold ${cardo.className}`}>
                         Weight loss, and so much more
                     </p>
-                    <p className="text-center font-semibold text-[20px] pb-10">
+                    <p className="text-center text-xl pb-10">
                         EARLY helps you feel your best, look your best, and improve other important aspects of your life
                     </p>
                     <div className="w-full flex justify-center">
@@ -1020,7 +1022,7 @@ export default function Glp1Benefits() {
                     </div>
                 </section>
 
-                <section className="bg-[#E8E9E1] px-4 md:px-6 lg:px-20 py-12 lg:py-24">
+                <section className="bg-[#E8E9E1] px-4 md:px-6 lg:px-20 py-6 lg:py-16">
                     <div className="w-full flex justify-center">
                         <div className="w-full md:max-w-[90%] text-center">
                             <h2 className={`text-xl sm:text-3xl md:text-5xl font-semibold mb-10 ${cardo.className}`}>
@@ -1091,7 +1093,7 @@ export default function Glp1Benefits() {
                                     {faqData.map((item, i) => (
                                         <Accordion key={i} type="single" collapsible className="w-full">
                                             <AccordionItem value={`item-${i + 1}`}>
-                                                <AccordionTrigger className={`text-[25px] text-black font-semibold ${unna.className}`}>
+                                                <AccordionTrigger className={`text-[20px] text-black font-semibold ${unna.className}`}>
                                                     {item.question}
                                                 </AccordionTrigger>
                                                 <AccordionContent className="whitespace-pre-line text-[20px]">

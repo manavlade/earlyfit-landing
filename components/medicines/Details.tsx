@@ -156,7 +156,7 @@ const Details = () => {
                                 ))}
                             </div>
 
-                            <ul className="space-y-4 text-[24px] font-medium text-black">
+                            <ul className="space-y-4 text-[24px] pb-4 font-medium text-black">
                                 {[
                                     "Lowers blood sugar",
                                     "Reduces appetite",
@@ -170,7 +170,7 @@ const Details = () => {
                                 ))}
                             </ul>
 
-                            <button className="bg-[#607a3e] hover:bg-[#4f6730] text-white font-semibold px-6 py-2 rounded-full text-sm">
+                            <button className="bg-[#607a3e] hover:bg-[#4f6730] text-xl text-white font-semibold px-10 py-3 rounded-full ">
                                 Know More
                             </button>
                         </div>
@@ -205,7 +205,7 @@ const Details = () => {
                                 alt="Detail Illustration"
                                 width={800}
                                 height={700}
-                                className="w-full max-w-xl h-auto"
+                                className="w-full max-w-xl rounded-xl h-auto"
                             />
                         </div>
                     </div>
@@ -219,7 +219,7 @@ const Details = () => {
                                 alt="Detail Illustration"
                                 width={800}
                                 height={700}
-                                className="w-full max-w-xl h-auto"
+                                className="w-full max-w-xl rounded-xl h-auto"
                             />
                         </div>
                         <div className="flex-1 text-center md:text-left space-y-6">
@@ -256,7 +256,7 @@ const Details = () => {
                                 alt="Detail Illustration"
                                 width={800}
                                 height={700}
-                                className="w-full max-w-xl h-auto"
+                                className="w-full max-w-xl rounded-xl h-auto"
                             />
                         </div>
                     </div>
@@ -301,8 +301,8 @@ const Details = () => {
                 <div className="w-full bg-[#DBDFD2] flex mt-[50px] md:mt-[100px] justify-center py-10">
                     <div className=" flex flex-col md:flex-row  items-center justify-center">
                         <div>
-                            <p className="text-3xl md:text-5xl text-center py-6 font-bold" >How to use It</p>
-                            <p className="text-xl md:text-2xl py-2 text-center" >Physicians typically instruct patients to take Ozempic once a week.</p>
+                            <p className={`text-3xl md:text-5xl text-center py-6 font-bold ${unna.className}`} >How to use It</p>
+                            <p className="text-xl md:text-xl py-1 text-center" >Physicians typically instruct patients to take Ozempic once a week.</p>
                             <div className="pt-8" >
                                 <div className="w-full  space-y-4 px-10 md:px-0">
                                     {faqData.map((item, i) => (
@@ -326,13 +326,11 @@ const Details = () => {
 
                 <section className="w-full py-10 mt-[50px] md:mt-[100px]">
                     <div className="w-full flex justify-center">
-                        <div className="w-full md:w-[90%] flex flex-col items-center md:items-start mx-auto gap-4">
-                            {/* Title */}
+                        <div className="w-full md:w-[90%] flex flex-col items-center mx-auto gap-4">
+                            
                             <p className={`text-3xl md:text-5xl font-bold text-center md:text-left w-full ${unna.className}`}>
                                 Other Medications
                             </p>
-
-                            {/* Arrows */}
                             <div className=" hidden md:flex  gap-4 self-end">
                                 <button className="bg-transparent hover:bg-white border border-[#02542D] rounded-full p-2 shadow-md">
                                     <ArrowLeft className="w-5 h-5 text-[#02542D]" />

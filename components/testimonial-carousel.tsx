@@ -81,21 +81,20 @@ export default function TestimonialCarousel() {
   const otherTestimonials = testimonials.filter((_, index) => index !== activeIndex)
 
   return (
-    <div className="bg-[#F9F8F3]" >
+    <div >
       <div className="w-full  max-w-7xl mx-auto  ">
-      <h1 className={`text-center text-[22px] md:text-[70px] font-extrabold ${unna.className}`}>Real Success Stories</h1>
+      <h1 className={`text-center text-3xl pb-4 md:text-5xl pt-4 font-extrabold ${unna.className}`}>Real Success Stories</h1>
         {/* Rating Display Section */}
-        <div className="text-center mb-16 relative">
+        <div className="text-center mb-10 relative">
           <div className="flex justify-center items-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-8 h-8 fill-[#79A55F] text-[#79A55F] drop-shadow-sm" />
             ))}
           </div>
-          <p className="text-2xl text-gray-700 font-semibold">4.5 Average Rating • {testimonials.length * 47} Reviews</p>
+          <p className="text-xl text-gray-700 ">4.5 Average Rating • {testimonials.length * 47} Reviews</p>
         </div>
 
-        {/* Main Content Layout */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-start ">
           <div className="space-y-8">
             <Card className="overflow-hidden shadow-2xl p-0">
               <CardContent className="p-0">
