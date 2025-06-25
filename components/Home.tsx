@@ -382,47 +382,47 @@ export default function Glp1Benefits() {
   "
                         >
 
+                            <div className='pb-14 md:pb-0 space-y-4' >
+                                <h1 className={`text-3xl md:text-3xl xl:text-5xl font-bold leading-snug ${unna.className}`}>
+                                    The LAST weight loss <br /> program you’ll ever try
+                                </h1>
 
-
-                            <h1 className={`text-3xl md:text-3xl xl:text-5xl font-bold leading-snug ${unna.className}`}>
-                                The LAST weight loss <br /> program you’ll ever try
-                            </h1>
-
-                            <div className="bg-white px-4 inline-block sm:px-4 py-2 rounded-lg text-left shadow-sm">
-                                <p className="text-gray-900 text-xl md:text-xl xl:text-2xl font-bold leading-tight">
-                                    Up to{" "}
-                                    <span className="text-xl md:text-2xl xl:text-4xl font-semibold text-[#79855F]">
-                                        20%*
-                                    </span>
-                                    <br />
-                                    weight loss with GLP-1
-                                </p>
-                            </div>
-
-                            <div className="flex  gap-4 w-full">
-                                <button className="w-full sm:w-auto px-2 md:px-5 py-2 md:py-3 bg-[#D2F47D] text-black text-sm md:text-md lg:text-xl font-semibold rounded-full transition whitespace-nowrap">
-                                    Book FREE Consultation
-                                </button>
-                                <button className="w-full sm:w-auto px-2 md:px-5 py-2 md:py-3 bg-white text-black border border-gray-300 text-sm md:text-md lg:text-xl font-medium rounded-full transition hover:bg-gray-100 whitespace-nowrap">
-                                    Learn About GLP-1
-                                </button>
-                            </div>
-                            <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-white text-sm md:text-lg xl:text-2xl break-words w-full">
-                                <div className="flex items-start gap-2">
-                                    <Stethoscope className="w-5 h-5 mt-1 shrink-0" />
-                                    <span>Built by Super-Specialty Endocrinologists</span>
+                                <div className="bg-white px-4 inline-block sm:px-4 py-2 rounded-lg text-left shadow-sm">
+                                    <p className="text-gray-900 text-xl md:text-xl xl:text-2xl font-bold leading-tight">
+                                        Up to{" "}
+                                        <span className="text-xl md:text-2xl xl:text-4xl font-semibold text-[#79855F]">
+                                            20%*
+                                        </span>
+                                        <br />
+                                        weight loss with GLP-1
+                                    </p>
                                 </div>
-                                <div className="flex items-start gap-2">
-                                    <BadgeCheck className="w-5 h-5 mt-1 shrink-0" />
-                                    <span>Results or Money Back</span>
+
+                                <div className="flex  gap-4 w-full">
+                                    <button className="w-full sm:w-auto px-2 md:px-5 py-2 md:py-3 bg-[#D2F47D] text-black text-sm md:text-md lg:text-xl font-semibold rounded-full transition whitespace-nowrap">
+                                        Book FREE Consultation
+                                    </button>
+                                    <button className="w-full sm:w-auto px-2 md:px-5 py-2 md:py-3 bg-white text-black border border-gray-300 text-sm md:text-md lg:text-xl font-medium rounded-full transition hover:bg-gray-100 whitespace-nowrap">
+                                        Learn About GLP-1
+                                    </button>
                                 </div>
-                                <div className="flex items-start gap-2">
-                                    <CheckCircle className="w-5 h-5 mt-1 shrink-0" />
-                                    <span>Safe, Effective and Sustainable Results</span>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                    <HeartPulse className="w-5 h-5 mt-1 shrink-0" />
-                                    <span>100% Personalized Plans</span>
+                                <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-white text-sm md:text-lg xl:text-2xl break-words w-full">
+                                    <div className="flex items-start gap-2">
+                                        <Stethoscope className="w-5 h-5 mt-1 shrink-0" />
+                                        <span>Built by Super-Specialty Endocrinologists</span>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <BadgeCheck className="w-5 h-5 mt-1 shrink-0" />
+                                        <span>Results or Money Back</span>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <CheckCircle className="w-5 h-5 mt-1 shrink-0" />
+                                        <span>Safe, Effective and Sustainable Results</span>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <HeartPulse className="w-5 h-5 mt-1 shrink-0" />
+                                        <span>100% Personalized Plans</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
